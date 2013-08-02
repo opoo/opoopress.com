@@ -1,5 +1,5 @@
 # ----------------------- #
-#   目录结构配置                             #
+#   目录结构配置          #
 # ----------------------- #
 # 默认（推荐）的目录结构如下
 #(.)
@@ -116,7 +116,7 @@ excerpt_separator: "<!--more-->"
 titlecase: true
 
 # 主导航菜单
-navs: {"博客": "/zh/", "下载": "/zh/download/", "文档": "/zh/docs/", "帮助": "/zh/help/", "源码": "https://github.com/opoo/opoopress", "English": "/en/"}
+navs: {"博客": "/zh/", "下载": "/zh/docs/installation/", "文档": "/zh/docs/", "帮助": "/zh/help/", "源码": "https://github.com/opoo/opoopress", "English": "/en/"}
 
 # 侧边栏默认包含的模板数组。
 # 被设置的模板片段应该位于  [模板路径]/asides 目录，例如 site/templates/asides 或者 site/source/_templates/asides.

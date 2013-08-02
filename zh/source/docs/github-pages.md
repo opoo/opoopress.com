@@ -21,8 +21,8 @@ Github Pages 运行时文件来源于特定的 GitHub 库中的特定分支。Gi
 ### 1.1、用户 和 组织 Pages
 
 用户 和 组织 Pages 存放于一个特殊的 GitHub 库中，与普通的 GitHub 库不同，这个库只能存放 GitHub Pages 文件。
-该库必须以用户账号来命名。 例如 [opoo 的用户 Pages 库](https://github.com/opoo/opoo.github.com)的名称 为
-`opoo.github.com`（由于 GitHub Pages 域名变更，变更后新建的用户 Pages 库名应为 <code>username.github.io</code>）。
+该库必须以用户账号来命名。 例如 [opoo 的用户 Pages 库](https://github.com/opoo/opoo.github.io)的名称 为
+`opoo.github.io`（由于 GitHub Pages 域名变更，早期创建的用户 Pages 库名可能是 <code>username.github.com</code>）。
 
 该库中 `master` 分支的内容将会用来构建和发布到 GitHub Pages 站点，所以要确保您的 OpooPress 站点内容都存储在这个分支。
 
