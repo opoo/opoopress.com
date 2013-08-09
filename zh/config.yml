@@ -73,10 +73,17 @@ email:
 # 如果发布到子目录如 http://site.com/project 则设置 'root: /project'
 root: /zh
 
-# 固定链接支持的变量  :year, :month, :day, :hour, :minute, :second, :title 
-# permalink:
+# 固定链接支持的变量 ：
+# 		post 的 front-matter 头部变量 ，以及 ${year}, ${month}, ${day}, ${hour}, ${minute}, ${second}, ${name}, ${pathToFile}, ${fileName} 
+permalink: /article/${name}/
 # permalink_label: "&infin;"
 # permalink_label_feed: "&#9875; 固定链接"
+
+# 新建文章的文件全路径（相对于 source 目录），支持变量 : {year}, ${month}, ${day}, ${hour}, ${minute}, ${second}, ${name}, ${title}, ${date}
+new_post: article/${year}-${month}-${day}-${name}.markdown
+
+# 新建页面的文件全路径（相对于 source 目录），支持变量  : ${year}, ${month}, ${day}, ${hour}, ${minute}, ${second}, ${name}, ${title}, ${date}
+new_page: ${name}.markdown
 
 # 分类所在的目录
 category_dir: /category
@@ -128,6 +135,8 @@ default_asides: [recent_posts.ftl, github.ftl, delicious.ftl, pinboard.ftl, goog
 # post_asides:
 # 普通页面侧边栏包含的模板，未设置使用 default_asides
 # page_asides: [docs_index.ftl]
+
+new_post_dir: "'article/'"
 
 # ----------------------- #
 #   3rd Party Settings    #
