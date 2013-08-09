@@ -128,7 +128,30 @@ YAML front-matter header 以三个 `-` 的行开始，并同样以三个 `-` 的
         <p>当前页面/文章是否允许底栏。可选，默认值 <code>true</code>。</p>
       </td>
     </tr>
-
+    <tr>
+      <td>
+        <p><code>author</code></p>
+      </td>
+      <td>
+        <p>当前页面/文章的作者，可选。多人共用一个博客时可指定每篇文章、页面的作者。</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p><code>keywords</code></p>
+      </td>
+      <td>
+        <p>关键字。可选。生成 HTML 的 &lt;meta name="keywords" content="keywords"&gt;。</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p><code>desription</code></p>
+      </td>
+      <td>
+        <p>描述。可选。生成 HTML 的 &lt;meta name="desription" content="desription"&gt;。</p>
+      </td>
+    </tr>
   </tbody>
 </table>
 
@@ -171,6 +194,15 @@ YAML front-matter header 以三个 `-` 的行开始，并同样以三个 `-` 的
         <p>文章的标签。<code>tag</code> 指定单个标签，如 <code>tag: Tag0</code>。<code>tags</code> 指定一个数组，如 <code>tags: [Tag1, Tag2, Tag3]</code></p>
       </td>
     </tr>
+      <tr>
+      <td>
+        <p><code>excerpt</code></p>
+      </td>
+      <td>
+        <p>文章的摘要。可选。在博客首页显示摘要，并显示继续阅读按钮。</p>
+      </td>
+    </tr>
+
   </tbody>
 </table>
 
@@ -188,7 +220,6 @@ var2: "a b c"
 --- 
 
 本页中的变量 val1 值为 ${'$'}{page.val1}，var2 值为 /${'$'}{page.val1}/。
-
 当前站点的 url 是 ${'$'}{site.url}
 
 ```
@@ -196,9 +227,8 @@ var2: "a b c"
 输出
 ```
 本页中的变量 val1 值为 ${page.var1}，var2 值为 /${page.var2}/。
-
 当前站点的 url 是 ${site.url}
 ```
 
 
-最后，也请参考 [Jekyll Front-matter](http://jekyllrb.com/docs/frontmatter/)。
+更多相关知识可参考 [Jekyll Front-matter](http://jekyllrb.com/docs/frontmatter/)。

@@ -11,7 +11,7 @@ group: "安装配置"
 ~ $ mkdir myblog
 ~ $ cd myblog
 ~ $ wget http://www.opoopress.com/downloads/pom.xml
-~ $ mvn op:install op:generate op:preview
+~ $ mvn op:preview
 ```
 用浏览器打开 http://localhost:8080/ 即可见预览界面。
 

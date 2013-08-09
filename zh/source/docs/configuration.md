@@ -24,5 +24,5 @@ OpooPress 允许用户深度定制自己的博客/网站，主配置文件为 `c
 
 在安装有 Ruby 的环境中，可以在 `config.rb` 所在目录运行 `compass compile` 来编译生成主题 `CSS`。
 
-OpooPress 运行时并不需要 Ruby 环境，在纯 Java 环境下，OpooPress 也能编译出主题 `CSS`，只需要在站点 `pom.xml` 所在目录运行 `mvn op:sass-compile` 即可。此时，OpooPress 实质上使用了 `JRuby` 引擎，`config.rb` 配置文件同样有效。
+OpooPress 运行时并不依赖于 Ruby 环境，可在纯 Java 环境下编译 `SASS/SCSS`，只需要在站点 `pom.xml` 所在目录运行 `mvn op:sass-compile` 即可。OpooPress 在底层使用 `JRuby` 引擎，所以 `config.rb` 配置文件同样有效。
 

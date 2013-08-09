@@ -14,11 +14,15 @@ group: "安装配置"
 	 |   |
 	 |   +- config.yml (站点的配置文件)
 	 |   |
-	 |   +- source (所有带有 YAML 头的站点有源文件，和静态文件)
+	 |   +- config.rb (主题样式配置文件)
 	 |   |
-	 |   +- templates (所有 FreeMarker 模板)
+	 |   +- source (所有带有 YAML front-matter 头的源文件及静态文件)
 	 |   |
-	 |   +- assets (静态资源，也可以直接放在 source 目录中)
+	 |   +- templates (所有 FreeMarker 模板，也可放在 source/_templates 目录下)
+	 |   |
+	 |   +- assets (静态资源，也可以直接放在 source 目录下)
+	 |   |
+	 |   +- sass (SASS/SCSS 源文件，主题样式源文件)
 	 |  
 	 +- site2 第二个站点，目录结构同第一个
 	 |
