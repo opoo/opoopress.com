@@ -70,6 +70,18 @@ export JAVA_HOME PATH CLASSPATH</pre>
 4. 运行 `mvn -version` 命令检验是否正确地安装了 Maven。
 
 
+<div class='note'>
+  <h3>Linux 环境变量</h3>
+  <p>使用 bash 时，可以在文件 <code>/etc/profile</code> 中增加以下内容
+  <pre>M2_HOME=/usr/local/apache-maven/apache-maven-3.1.0
+M2=$M2_HOME/bin
+PATH=$PATH:$M2
+export M2_HOME M2 PATH</pre>
+  </p>
+   <p>然后执行 <code>. 
+   /etc/profile</code> 使修改生效。</p>
+</div>
+
 ## 三、初始化 OpooPress
 可选择仅下载 `pom.xml` 或者下载 二次开发库 来初始化 OpooPress 博客/网站。
 
