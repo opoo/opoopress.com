@@ -53,6 +53,8 @@ OpooPress 支持 2 个主流的标记语言格式：[Markdown](http://daringfire
 
 页面的 [YAML front- matter](../frontmatter) 可参看上一章节。
 
+页面内容可以完全是 FreeMarker 标记，参考博客首页源文件 `source/index.html`。
+
 
 ## 三、预览页面
 

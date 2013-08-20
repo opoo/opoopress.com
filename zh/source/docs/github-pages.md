@@ -111,7 +111,7 @@ $ mvn op:deploy
 
 1. config.yml
 ```plain
-deploy_server: {id: "github", url: "github://github.com/opoo/opoo.github.com/", branch: "refs/heads/master", message: "Commit my website."}
+deploy_server: {id: "github", url: "github://github.com/opoo/opoo.github.io/", branch: "refs/heads/master", message: "Commit my website."}
 ```
 
 2. settings.xml
@@ -119,8 +119,8 @@ deploy_server: {id: "github", url: "github://github.com/opoo/opoo.github.com/", 
 <servers>
 	<server>
 		<id>github</id>
-		<username>opoo</username>
-		<password>password-of-opoo-at-github</password>
+		<username>my-github-username</username>
+		<password>my-github-password</password>
 	</server>
 </servers>
 ```
