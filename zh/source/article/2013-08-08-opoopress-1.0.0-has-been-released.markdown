@@ -1,10 +1,10 @@
 ---
 layout: post
-title: 'OpooPress 1.0 RC1 发布'
+title: 'OpooPress 1.0.0 正式发布'
 date: '2013-07-07 00:30'
 comments: true
 categories: ['opoopress']
-url: '/article/opoopress-1.0-rc1-has-been-released/'
+url: '/article/opoopress-1.0.0-has-been-released/'
 ---
 
 OpooPress 博客系统是一个基于 Java 的可用于博客的静态网站生成器。主要特性如下：
@@ -54,6 +54,10 @@ OpooPress 第一版已经发布，[这篇文章](http://opoo.org/opoopress-1.0.0
 
 ### 源代码
 OpooPress 的源代码在：[https://github.com/opoo/opoopress](https://github.com/opoo/opoopress)
+
+### 示例站点
+- [OpooPress.com](http://www.opoopress.com/)
+- [Opoo.org](http://opoo.org/)
 
 ### 反馈与建议
 如果在使用过程中发现问题，可以在这里[报告问题](https://github.com/opoo/opoopress/issues)。

@@ -10,28 +10,29 @@ group: "内容"
 
 执行以下指令创建新文章
 ```
-mvn op:new-post -Dtitle="文章标题" -Dname="文件名称"
+mvn op:new-post -Dtitle="文章标题" -Dname="文件名称" -Dformat=markdown
 ```
 
 参数使用 `-D参数名=参数值` 的形式设置。其中：
 - **title**：必须。当前文章的标题。
 - **name**：可选。当前文章文件的名称，相当于 WordPress 中 slug 的概念，用于文章的 URL。如果不指定该参数，name 将由 title [自动转化](https://github.com/opoo/opoopress/blob/master/core/src/main/java/org/opoo/press/SlugHelper.java)而来，中文会被转成拼音，特殊字符会被移除。
+- **format**：可选。当前文章的格式，默认值是 `markdown`，可根据需要指定值为 `textile`、`html`、`md` 等。
 
 ### 1.1 文件位置
-新建文章文件默认存储在 `$site/source/article/yyyy/MM/` 目录中。该默认值可以自定义，在 `config.yml` 中设置属性 `new_post_dir` 即可。例如要将所有的文章按年保存，则设置 `new_post_dir: "'article/'yyyy/"`。其中 `yyyy`, `MM` 等对应于 Java DateFormat 中的格式化字符串。
+新建文章默认存储路径为 `article/${'$'}{year}-${'$'}{month}-${'$'}{day}-${'$'}{name}.${'$'}{format}` （相对于 $site/source 目录）。该默认值可以自定义，在 `config.yml` 中设置属性 `new_post` 即可。例如要将所有的文章按年保存，则设置 `new_post: "article/${'$'}{year}/${'$'}{year}-${'$'}{month}-${'$'}{day}-${'$'}{name}.markdown"`，或者 `new_post: "article/${'$'}{year}/${'$'}{year}-${'$'}{month}-${'$'}{day}-${'$'}{name}.${'$'}{format}"`。
 
-文件的默认后缀是 `.markdown`，与 `.md` 是等价的。如果文章使用其它格式撰写，请修改相应的后缀，如 `.textile`, `.html` 等。
+跟路径中的变量 year, month, day, hour, minute, second 取自于当前时间，变量 name, format 取自调用 new-post 的参数。
 
 示例1：
 	mvn op:new-post -Dtitle="世界，你好" -Dname="hello-world"
-将生成文件 `$site/source/article/2013/07/2013-07-31-hello-world.markdown`
+将生成文件 `$site/source/article/2013-07-31-hello-world.markdown`
 
 示例2：
-	mvn op:new-post -Dtitle="世界，你好"
-将生成文件 `$site/source/article/2013/07/2013-07-31-shi-jie-ni-hao.markdown`
+	mvn op:new-post -Dtitle="世界，你好" -Dformat=md
+将生成文件 `$site/source/article/2013-07-31-shi-jie-ni-hao.md`
 
 <div class='note'>
-  <p>与 Jekyll、Octopress 不同，OpooPress 的文章源文件可以存放在 `$site/source` 下的任意位置，生成器在构建时或根据固定链接、URL 等参数输出到适当的路径。如果没有固定链接、URL 等影响输出路径的配置，则按文章在 `$site/source` 中的相对路径输出。</p>
+  <p>与 Jekyll、Octopress 不同，OpooPress 的文章源文件可以存放在 `$site/source` 下的任意位置，生成器在构建时会根据固定链接、URL 等参数输出到适当的路径。如果没有固定链接、URL 等影响输出路径的配置，则按文章在 `$site/source` 中的相对路径输出。</p>
 </div>
 
 
@@ -42,9 +43,10 @@ mvn op:new-post -Dtitle="文章标题" -Dname="文件名称"
 * **title**：文章标题
 * **name**：文章名称
 * **date**：日期，格式 yyyy-MM-dd HH:mm
-* **filename**：文件名
-* **filepath**：文件相对于 `$site/source` 的路径
+* **year, month, day, hour, minute, second**：日期的各个组成部分，year 4 位，其它 2 位。
+* **file**：当前文件
 * **site**：当前 [site](https://github.com/opoo/opoopress/blob/master/core/src/main/java/org/opoo/press/Site.java) 对象
+* **published**：是否发布
 
 ## 二、撰写内容
 
