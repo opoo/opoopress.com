@@ -40,7 +40,7 @@ group: "安装配置"
 
 1. **安装站点**  
 	- 功能: 安装站点
-	- Goal: `op:install`, goal: `op:clean`
+	- Goal: `op:install`, `op:clean`
 2. **生成主题**
 	- 功能: 生成主题
 	- Goal: `op:sass-compile`, `op:sass-watch`, `op:new-post`, `op:new-page`, `op:import`

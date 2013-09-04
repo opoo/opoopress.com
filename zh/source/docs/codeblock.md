@@ -29,7 +29,7 @@ OpooPress 扩展了 Markdown 的代码块功能，使用 [Syntax Highlighter Com
 	code snippet
 	```
 或者
-	~~~java
+	~~~language
 	code snippet
 	~~~
 会转成：
@@ -66,14 +66,14 @@ function checkform(f){
 ```
 
 示例3:
-	```py
+	~~~py
 	#!/usr/bin/python
 	# Filename : helloworld.py
 	print 'Hello World'
-	```
+	~~~
 
-```py
+~~~py
 #!/usr/bin/python
 # Filename : helloworld.py
 print 'Hello World'
-```
+~~~

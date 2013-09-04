@@ -219,14 +219,14 @@ var2: "a b c"
 ...
 --- 
 
-本页中的变量 val1 值为 ${'$'}{page.val1}，var2 值为 /${'$'}{page.val1}/。
+本页中的变量 var1 值为 ${'$'}{page.var1}，var2 值为 /${'$'}{page.var1}/。
 当前站点的 url 是 ${'$'}{site.url}
 
 ```
 
 输出
 ```
-本页中的变量 val1 值为 ${page.var1}，var2 值为 /${page.var2}/。
+本页中的变量 var1 值为 ${page.var1}，var2 值为 /${page.var2}/。
 当前站点的 url 是 ${site.url}
 ```
 

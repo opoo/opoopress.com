@@ -214,7 +214,7 @@ Execute command: mvn op:deploy
 出于安全性考虑。Apache James、OpooPress Mailet 安装、配置、调试完成后，必须再次修改 Apache James 配置文件 `config.xml`。
 
 * 禁用远程管理服务：`<remotemanager/>` 节点 `enabled` 改为 `false`。
-* 禁用 NNTP 服务：`<nntpserver/>` 节点 `enabled` 改为 `false`，并将 `nntp-repository` 中的 `threadCount` 为 `0`。
+* 禁用 NNTP 服务：`<nntpserver/>` 节点 `enabled` 改为 `false`，并将 `<nntp-repository/>` 中的 `threadCount` 改为 `0`。
 
 
 如果要以服务（后台进程）的形式运行 Apache James，请使用以下命令:

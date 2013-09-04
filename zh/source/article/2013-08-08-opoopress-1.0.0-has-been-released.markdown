@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'OpooPress 1.0.0 正式发布'
-date: '2013-07-07 00:30'
+date: '2013-08-08 00:30'
 comments: true
 categories: ['opoopress']
 url: '/article/opoopress-1.0.0-has-been-released/'
