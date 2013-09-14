@@ -3,7 +3,7 @@ layout: doc
 title: 插件机制
 url: /docs/plugins/
 index: 140
-group: "二次开发"
+group: "定制"
 ---
 
 通过插件机制可以很容易的扩展 OpooPress 博客系统的功能。 Plugin 定义如下
@@ -18,7 +18,7 @@ public interface Plugin{
 }
 ~~~
 
-`Registry` 接口定义如下：
+Registry 接口定义如下：
 ~~~java
 public interface Registry {
 	

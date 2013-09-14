@@ -27,7 +27,7 @@ YAML front-matter header 以三个 `-` 的行开始，并同样以三个 `-` 的
 
 **注意**：变量名 和 值 之间需要使用半角 `:`，且 `:` 后应有一个半角的空格。
 
-## 公共变量
+## 一、公共变量
 
 以下变量在页面（Page）或者文章（Post）中都是通用的
 
@@ -156,7 +156,7 @@ YAML front-matter header 以三个 `-` 的行开始，并同样以三个 `-` 的
 </table>
 
 
-## 仅适用于文章（Post）的变量
+## 二、仅适用于文章（Post）的变量
 
 
 <table>
@@ -206,7 +206,7 @@ YAML front-matter header 以三个 `-` 的行开始，并同样以三个 `-` 的
   </tbody>
 </table>
 
-## 自定义 front-matter header 变量
+## 三、自定义 front-matter header 变量
 
 自定义变量可在文章、页面中通过 FreeMarker 语法引用。
 

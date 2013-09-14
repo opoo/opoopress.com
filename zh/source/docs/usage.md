@@ -6,7 +6,7 @@ index: 30
 group: "安装配置"
 ---
 
-## Maven Plugin 版本命令
+## 一、Maven Plugin 版本命令
  
 命令格式：`mvn op:command -Dparam1=val1 -Dparam2=var2 ...`
 
@@ -67,7 +67,7 @@ group: "安装配置"
 
 
 
-## OpooPress Standalone 版本命令
+## 二、OpooPress Standalone 版本命令
 
 命令格式通常是 `op command [site] [options]`，各个参数意义如下：
 

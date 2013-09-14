@@ -15,7 +15,7 @@ group: "安装配置"
 
 ## 一、安装 Java
 
-### Windows
+### 1.1 Windows
 1. 在 [Oracle Java 网站](http://www.oracle.com/technetwork/java/javase/downloads/index.html)下载 Java SE Development Kit(JDK)。进入下载页面后需要点击 "Accept License Agreement" 才能下载。根据您操作系统环境选择 Windows x86 或者 Windows x64 版本。
 2. 执行下载的 exe 文件进行安装。安装过程会先安装 JDK，再安装 JRE，最好能将 Java 安装在没有空格的路径，如 JDK 安装在`C:\java\jdk1.7.0`，JRE 安装在 `C:\java\jre7`。
 3. 配置环境变量。打开 `系统属性`对话框，选择选项卡`高级`，点击`环境变量`按钮，打开`环境变量`对话框，在系统变量中：
@@ -25,7 +25,7 @@ group: "安装配置"
 4. 打开命令行窗口(按 Win 键 + R，输入 `cmd`)，运行 `java -version` 命令检验是否正确地安装了 Java。
 5. 更多细节请访问 [JDK Installation for Microsoft Windows](http://docs.oracle.com/javase/7/docs/webnotes/install/windows/jdk-installation-windows.html)。
 
-### Linux
+### 1.2 Linux
 1. 以 CentOS 为例，执行命令 `yum install java-1.7.0-openjdk java-1.7.0-openjdk-devel` 安装 `OpenJDK 1.7.0`。
 2. 在命令行终端中设置环境变量 JAVA_HOME, CLASSPATH 和 Path，例如
     * `export JAVA_HOME=/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.19`
@@ -49,7 +49,7 @@ export JAVA_HOME PATH CLASSPATH</pre>
 
 ## 二、安装 Maven
 
-### Windows 2000/XP
+### 2.1 Windows 2000/XP
 1. [下载 Apache Maven](http://maven.apache.org/download.cgi) 发行包(如：`apache-maven-3.1.0-bin.zip`)。
 2. 解压发行包(如：`apache-maven-3.1.0-bin.zip`)到您要安装 Maven 3.1.0 的目录，例如 `C:\Program Files`，解压后将会在这个目录下生成子目录 `apache-maven-3.1.0`。
 3.  配置环境变量。打开 `系统属性`对话框，选择选项卡`高级`，点击`环境变量`按钮，打开`环境变量`对话框，在系统变量中：
@@ -59,7 +59,7 @@ export JAVA_HOME PATH CLASSPATH</pre>
     - 修改变量 `Path`，将值后增加字符串 `;%M2%`
 4. 打开命令行窗口(按 Win 键 + R，输入 `cmd`)，运行 `mvn -version` 命令检验是否正确地安装了 Maven。
 
-### Unix-based Operating Systems (Linux, Solaris and Mac OS X)
+### 2.2 Unix-based Operating Systems (Linux, Solaris and Mac OS X)
 1. [下载 Apache Maven](http://maven.apache.org/download.cgi) 发行包(如：`apache-maven-3.1.0-bin.tar.gz`)。
 2. 解压发行包(如：`apache-maven-3.1.0-bin.tar.gz`)到您要安装 Maven 3.1.0 的目录，例如 `/usr/local/apache-maven`，解压后将会在这个目录下生成子目录 `apache-maven-3.1.0`。
 3. 在命令行终端中设置环境变量 M2_HOME, M2, MAVEN_OPTS 和 Path，如下：
@@ -85,7 +85,7 @@ export M2_HOME M2 PATH</pre>
 ## 三、初始化 OpooPress
 可选择仅下载 `pom.xml` 或者下载 二次开发库 来初始化 OpooPress 博客/网站。
 
-### 仅 `pom.xml`
+### 3.1 仅 `pom.xml`
 1. 在本地创建您需要存放博客/网站的目录(`mkdir myblog`)。
 2. 进入该目录(`cd myblog`)。
 3. 下载 [pom.xml](http://www.opoopress.com/downloads/pom.xml) 到目录中。Linux 使用 `wget http://www.opoopress.com/downloads/pom.xml` 或者在链接上点右键另存为。
@@ -93,7 +93,7 @@ export M2_HOME M2 PATH</pre>
 5. 运行 `mvn op:generate` 生成静态网站，生成的文件在 `target/public/site` 目录，指定站点 `-Dsite=siteX` 时则为 `target/public/siteX`。
 6. 运行 `mvn op:preview` 启动 Web 服务器进行预览，默认端口 `8080`，可通过参数 `-Dport=8989` 来更改。启动后在浏览器中打开 http://localhost:8080/ 即可看见网站效果。
 
-### 二次开发库
+### 3.2 二次开发库
 1. 下载二次开发库，这是一个标准的 Java 工程，Maven 目录结构
     - 使用 git 工具: `git clone https://github.com/opoopress/opoopress-site.git`
     - 使用 GitHub for Windows: 在 [opoopress-site](https://github.com/opoopress/opoopress-site) 右下角点击 `Clone in Desktop`

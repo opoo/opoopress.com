@@ -6,7 +6,7 @@ index: 125
 group: "内容"
 ---
 
-## WordPress
+## 一、WordPress
 ```
 mvn op:wordpress-import -Dfile=./wordpress.xml -Dimport-author=false -Dimport-drafts=false -Dpermalink-style=/%postname%/ -Dimport-dir=wordpress
 ```
@@ -14,9 +14,10 @@ mvn op:wordpress-import -Dfile=./wordpress.xml -Dimport-author=false -Dimport-dr
 ```
 mvn op:import -Dimporter=wordpress -Dfile=./wordpress.xml -Dimport-author=false -Dimport-drafts=false -Dpermalink-style=/%postname%/ -Dimport-dir=wordpress
 ```
-这种格式中，将
+第二种是通用命令格式，用户可以扩展自己的导入程序。
 
-**必要参数**
+
+**参数**
 - file 
 	- 从 WordPress 后台管理中导出的 xml 文件
 - import-author
@@ -34,6 +35,6 @@ mvn op:import -Dimporter=wordpress -Dfile=./wordpress.xml -Dimport-author=false 
 **注意事项**
 - WordPress 中的加密文章在 OpooPress 中无效。
 
-## Octopress
+## 二、Octopress
 暂无内容
 

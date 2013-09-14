@@ -21,7 +21,7 @@ mvn op:new-post -Dtitle="文章标题" -Dname="文件名称" -Dformat=markdown
 ### 1.1 文件位置
 新建文章默认存储路径为 `article/${'$'}{year}-${'$'}{month}-${'$'}{day}-${'$'}{name}.${'$'}{format}` （相对于 $site/source 目录）。该默认值可以自定义，在 `config.yml` 中设置属性 `new_post` 即可。例如要将所有的文章按年保存，则设置 `new_post: "article/${'$'}{year}/${'$'}{year}-${'$'}{month}-${'$'}{day}-${'$'}{name}.markdown"`，或者 `new_post: "article/${'$'}{year}/${'$'}{year}-${'$'}{month}-${'$'}{day}-${'$'}{name}.${'$'}{format}"`。
 
-跟路径中的变量 year, month, day, hour, minute, second 取自于当前时间，变量 name, format 取自调用 new-post 的参数。
+存储路径中的变量 year, month, day, hour, minute, second 取自于当前时间，变量 name, format 取自调用 new-post 的参数。
 
 示例1：
 	mvn op:new-post -Dtitle="世界，你好" -Dname="hello-world"
@@ -60,7 +60,7 @@ OpooPress 支持 2 个主流的标记语言格式：[Markdown](http://daringfire
 
 文章的 [YAML front- matter](../frontmatter) 比较丰富，可参看上一章节。
 
-### 文章摘要
+### 2.1 文章摘要
 
 文章摘要是在博客首页显示时使用的。如果当前文章有摘要内容，则在首页显示摘要内容，并显示 `继续阅读` 的按钮，没有摘要内容则会显示文章全文。
 
@@ -69,7 +69,7 @@ OpooPress 支持 2 个主流的标记语言格式：[Markdown](http://daringfire
 - 在文章正文中适当的位置插入 `<!--more-->`，该标记前面的内容即文章摘要。该标记也可通过 `config.yml` 自定义。
 
 
-### 草稿
+### 2.2 草稿
 如果写作未完成，可将 [YAML front- matter](../frontmatter) 头 `published` 设置为 `false`，这样可避免误将文章发布出去。正式发布时则需要将该属性改回为 `true`。
 
 

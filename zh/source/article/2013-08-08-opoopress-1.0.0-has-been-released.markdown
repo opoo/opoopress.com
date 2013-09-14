@@ -7,7 +7,7 @@ categories: ['opoopress']
 url: '/article/opoopress-1.0.0-has-been-released/'
 ---
 
-OpooPress 博客系统是一个基于 Java 的可用于博客的静态网站生成器。主要特性如下：
+OpooPress 博客系统是一个基于 Java 的静态博客生成器，同时也是一个静态网站生成器。主要特性如下：
 
 - **简单** - 无需数据库，无需动态语言运行环境(例如PHP, Java等)
 - **快速** - 高效的生成引擎，由 Java 开发，[生成 1000 篇文章只需数秒](http://opoo.org/why-i-develop-opoopress/)

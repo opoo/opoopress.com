@@ -2,19 +2,19 @@
 layout: doc
 title: OpooPress Mailet
 url: /docs/mailet/
-index: 130
-group: "内容"
+index: 900
+group: "发布"
 ---
 
 OpooPress Mailet 是使用 [Apache Mailet API](http://james.apache.org/mailet/api/index.html) 编写的邮件处理程序，结合 Apache James Server，我们可以通过发送电子邮件的方式来发表博客文章。
 
-## 基本用法
+## 一、基本用法
 
 只需要向指定的 Email 地址发送邮件即可发表博客文章。邮件格式最好采用**纯文本**，但不是强制的。
 
 邮件的标题就是文章的标题，邮件的内容就是文章的正文，这就是 OpooPress Mailet 最基本的用法。关于自定义文章文件名、发布时间、标签、分类等高级应用请阅读后续章节。
 
-## 处理流程
+## 二、处理流程
 
 1. OpooPress Mailet 监听指定邮件地址的邮箱，发现符合规则新邮件则调用邮件转博客程序进行处理；
 2. 邮件转博客
@@ -23,12 +23,12 @@ OpooPress Mailet 是使用 [Apache Mailet API](http://james.apache.org/mailet/ap
 	- 调用静态博客引擎发布网站。
 3. 将处理过程和结果信息自动回复邮件给发送者。
 
-## 基本需求
+## 三、基本需求
 - 邮件服务器 (域名，IP等。例如 VPS)
 - 邮件服务器应用软件 [Apache James Server 2.3.2](http://james.apache.org/download.cgi#Apache_James_2.3.2_is_the_stable_version)
 - OpooPress Mailet 软件包
 
-## 搭建流程
+## 四、搭建流程
 
 示例环境如下：
 - Virtual Private Server (VPS) 
@@ -40,11 +40,11 @@ OpooPress Mailet 是使用 [Apache Mailet API](http://james.apache.org/mailet/ap
 - Apache Maven 3.1.0
 - Apache James 2.3.2
 
-### 一、安装 OpooPress 博客
+### 4.1 安装 OpooPress 博客
 
 请[参考该文档](http://www.opoopress.com/zh/docs/installation/)来安装 Java, Apache Maven 并安装和初始化 OpooPress 博客。完成后应该可以正常运行 OpooPress 的各种指令。
 
-### 二、安装配置 Apache James
+### 4.2 安装配置 Apache James
 1. 在域名管理面板中绑定域名
 	- 设置域名 `opoopress.mail.opoo.org` `A` 记录为 `1.2.3.4`
 	- 设置域名 `opoopress.mail.opoo.org` `MX` 记录为 `1.2.3.4`
@@ -93,7 +93,7 @@ adduser site3 site3password
 添加用户后，可在邮件客户端（如 Foxmail）中进行测试。设置用户 site1, site2, site3 的 POP3 和 SMTP 地址为你的域名（如 opoopress.mail.opoo.org），然后使用第三方邮箱（如 Gmail）分别向这几个邮箱里发送邮件，检查邮件接收情况。也可以使用这几个邮箱互发邮件（需要按第五步配置允许外部调用 SMTP）测试其发送和接收情况。
 
 
-### 三、安装配置 OpooPress Mailet
+### 4.3 安装配置 OpooPress Mailet
 1. 安装 OpooPress Mailet 软件包。目前需要从源码打包 OpooPress Mailet 软件包。
 ```
 git clone https://github.com/opoo/opoopress.git
@@ -136,7 +136,7 @@ cp target/dependency/*.jar /usr/local/james-2.3.2/apps/james/SAR-INF/lib/
 		git push
 		```
 
-### 四、使用邮件发布博客
+### 4.4 使用邮件发布博客
 
 本章示例讲解的是 OpooPress Mail 的高级应用，文章开头已经讲过基本用法。
 
@@ -209,7 +209,7 @@ Execute command: mvn op:deploy
 
 
 
-## 注意事项
+## 五、注意事项
 
 出于安全性考虑。Apache James、OpooPress Mailet 安装、配置、调试完成后，必须再次修改 Apache James 配置文件 `config.xml`。
 
