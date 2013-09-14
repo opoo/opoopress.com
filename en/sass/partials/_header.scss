@@ -15,4 +15,12 @@ body > header {
     color: $subtitle-color;
     font-weight: normal;
   }
+
+  .lang{
+    float:right;
+    font-size: .76em;
+    a, a:visited, a:hover {
+      text-decoration: none;
+    }
+  }
 }
