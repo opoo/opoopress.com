@@ -59,8 +59,8 @@ title: OpooPress
 subtitle: A java based static blog generator.
 author: Alex Lin
 simple_search: http://google.com/search
-description: OpooPress blogging framework is a java based static blog/site generator.
-keywords: "java, OpooPress, blog, static site generator, static blog generator"
+description: OpooPress blogging framework is a java based static blog generator, it's also a static site generator.
+keywords: "java, static blog generator, static site generator, OpooPress, blog, static blog"
 
 # Default date format is "ordinal" (resulting in 'Jun 20 2013', java date format pattern
 # is 'MMM d yyyy'). You can specified a custom java date format string here such as 'yyyy-MM-dd'
@@ -125,7 +125,8 @@ excerpt_separator: "<!--more-->"
 titlecase: true
 
 # Main navigation
-navs: {"Blog": "/en/", "Download": "/en/download/", "Documentation": "/en/docs/", "Help": "/en/help/", "Source Code": "https://github.com/opoo/opoopress", "中文站点": "/zh/"}
+navs: {"Blog": "/en/", "Download": "/en/docs/installation/", "Documentation": "/en/docs/", "Help": "/en/help/", "Source Code": "https://github.com/opoo/opoopress"}
+#, "中文站点": "/zh/"
 
 # list each of the sidebar modules you want to include, in the order you want them to appear.
 # To add custom asides, create files in 'site/templates/asides' or 'site/source/_templates/asides' 
@@ -172,7 +173,7 @@ delicious_count: 3
 
 # Disqus Comments
 disqus_short_name: opoopress
-disqus_show_comment_count: false
+disqus_show_comment_count: true
 
 # Google Analytics
 google_analytics_tracking_id: UA-42112065-1
