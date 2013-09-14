@@ -16,12 +16,16 @@
 <#if description??>
   <meta name="description" content="${description}">
 </#if>
-  <#if page.keywords??><meta name="keywords" content="${ page.keywords }"></#if>
+  <#if page.keywords??><meta name="keywords" content="${ page.keywords }"><#elseif site.keywords??><meta name="keywords" content="${ site.keywords }"></#if>
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
   <meta name="OpooPressSiteRoot" content="${ root_url }">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="Generator" content="OpooPress-${site.OpooPressVersion}">
   <!-- <link rel="canonical" href="${ canonical }"> -->
+  <link href="/zh${page.url}" rel="alternate" hreflang="zh">
+  <link href="/en${page.url}" rel="alternate" hreflang="en">
+  <link href="/en${page.url}" rel="alternate" hreflang="x-default">
   <link href="${ root_url }/favicon.ico" rel="icon">
   <link href="${ root_url }/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="${ site.subscribe_rss }" rel="alternate" title="${site.title}" type="application/atom+xml">

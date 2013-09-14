@@ -3,18 +3,19 @@
     <option value=""><@i18n.msg "Navigate"/>&hellip;</option>
 <#list site.navs?keys as navLabel>
     <#assign navUrl = site.navs[navLabel]>
-    <option value="${navUrl}"<#if (root_url + page.url) == navUrl> selected="selected"</#if>>&raquo; ${navLabel}</option>
     <#if navUrl == '/zh/docs/' && (site.docs)??>
 	<#assign group="NONE">
 	<#list site.docs as doc>
 	<#if (doc.group)?? && doc.group != group>
 	<#if group != "NONE"></optgroup></#if>
-	<optgroup label="${doc.group}">
+    <optgroup label="${doc.group}">
 	<#assign group = doc.group>
 	</#if>
-		<option value="${root_url}${doc.url}"<#if (page.url) == doc.url> selected="selected"</#if>>&raquo; ${doc.title}</option>
+	<option value="${root_url}${doc.url}"<#if (page.url) == doc.url> selected="selected"</#if>>&raquo; ${doc.title}</option>
 	</#list>
-	</optgroup>
+    </optgroup>
+    <#else>
+    <option value="${navUrl}"<#if (root_url + page.url) == navUrl> selected="selected"</#if>>&raquo; ${navLabel}</option>
     </#if>
  </#list>
   </select>
