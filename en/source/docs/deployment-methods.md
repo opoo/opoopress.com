@@ -6,7 +6,7 @@ index: 700
 group: "DEPLOYMENT"
 ---
 
-OpooPress 可通过多种方式发布。大部分是通过 [Apache Maven Wagon](http://maven.apache.org/wagon/) 实现的。可参考 Apache Maven Wagon 文档了解更多细节。
+OpooPress supports many deployment methods by [Apache Maven Wagon](http://maven.apache.org/wagon/).
 
 - File
 - HTTP

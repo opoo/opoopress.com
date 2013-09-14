@@ -6,7 +6,7 @@ index: 50
 group: "GETTING STARTED"
 ---
 
-## config.yml
+## 1. config.yml
 
 OpooPress allows you to customize your blog in any way you want. The main configuration file is `config.yml` placed in your site's root directory.
 
@@ -14,7 +14,7 @@ The language in file `config.yml` may be different according to `locale` option 
 
 This configuration file has many comments, just read them to understand how to customize your blog.
 
-## config.rb
+## 2. config.rb
 
 
 

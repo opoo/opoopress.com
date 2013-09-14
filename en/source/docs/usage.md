@@ -6,7 +6,7 @@ index: 30
 group: "GETTING STARTED"
 ---
 
-## For OpooPress Maven Plugin Release
+## 1. For OpooPress Maven Plugin Release
  
 Command format is`mvn op:command -Dparam1=val1 -Dparam2=var2 ...`.
 
@@ -56,6 +56,6 @@ Examples:
 - `op:new-post`: the dependency chain will be `op:new-post -> Install & Initialize`, and the execution order will be `Install & Initialize -> Create new post`.
 
 
-## For OpooPress Standalone Package Release
+## 2. For OpooPress Standalone Package Release
 
 Not available currently.

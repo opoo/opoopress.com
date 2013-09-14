@@ -22,7 +22,7 @@ Any file that contains a [YAML](http://yaml.org/) front matter block will be pro
 
 Between these triple-dashed lines, you can set predefined variables (see below for a reference) or even create custom ones of your own. These variables will then be available to you to access using FreeMarker tags in the source file of pages or posts.
 
-## Public Variables
+## 1. Public Variables
 
 Public variables that you can set in the front-matter of a page or post.
 
@@ -151,7 +151,7 @@ Public variables that you can set in the front-matter of a page or post.
 </table>
 
 
-## Variables for Post Only
+## 2. Variables for Post Only
 
 
 <table>
@@ -201,7 +201,7 @@ Public variables that you can set in the front-matter of a page or post.
   </tbody>
 </table>
 
-## Custom Front-matter Variables
+## 3. Custom Front-matter Variables
 
 Any variables in the front matter that are not predefined are mixed into the data that is sent to the FreeMarker templating engine during the conversion. For instance, if you set var1 and var2, you can use that in your layout or other source file:
 
