@@ -1,3 +1,5 @@
+<div class="lang"><a href="/zh/" title="转到中文">中文</a> | <a href="/en/" title="Jump to English">ENGLISH</a></div>
+<div class="logo"><img src="//www.opoopress.com/logo.png" alt="OpooPress"></div>
 <hgroup>
   <h1><a href="${ root_url }/">${ site.title }</a></h1>
   <#if site.subtitle??>
