@@ -52,6 +52,8 @@
 # ----------------------- #
 
 locale: zh_CN
+
+
 url: http://www.opoopress.com
 title: OpooPress
 subtitle: 基于 Java 的静态博客生成器
@@ -137,7 +139,6 @@ default_asides: [recent_posts.ftl, recent_comments.ftl]
 # 普通页面侧边栏包含的模板，未设置使用 default_asides
 # page_asides: [docs_index.ftl]
 
-new_post_dir: "'article/'"
 
 # ----------------------- #
 #   3rd Party Settings    #
@@ -181,6 +182,18 @@ google_analytics_tracking_domain:
 # Facebook Like
 facebook_like: false
 
+
+# ----------------------- #
+#   Deployment Settings   #
+# ----------------------- #
+# deploy_server: {id: my_vps_server, url: 'scp://my.vps.ip/var/www/html', user: 'ssh_username'}
+
+
+
+###############################################################################
+## 以下配置主要给开发人员使用，如果您不做二次开发或者不清楚各个参数的含义，
+## 请勿修改以下的各个参数 
+###############################################################################
 
 # ----------------------- #
 #   PlugIns Settings      #
