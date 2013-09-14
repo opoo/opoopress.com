@@ -44,6 +44,9 @@ public class DocsGenerator implements Generator {
 		
 		setPreviousOrNextPageUrl(docs);
 		site.set("docs", docs);
+
+		String version = Site.class.getPackage().getSpecificationVersion();
+		site.set("OpooPressVersion", version);
 	}
 
 	/**
