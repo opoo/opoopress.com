@@ -43,13 +43,14 @@ OpooPress also have these features:
 - FTP
 - SSH/SCP
 - WebDAV
-- [Github Pages](/zh/docs/github-pages/)
+- [Github Pages](/en/docs/github-pages/)
 
 # Getting Started
-[The first package has be released](http://opoo.org/opoopress-1.0.0-has-been-released/). It's easy to set up and deploy, Just check out the [docs](/en/docs/).
+The first package has be released. It's easy to set up and deploy.
+
+Released builds are available from [Maven Central](http://search.maven.org/#search%7Cga%7C1%7Corg.opoo.press), and snapshot packages are available from the [Sonatype OSS snapshots repository](https://oss.sonatype.org/content/repositories/snapshots/org/opoo/press/). Click the button below to know how to use them. 
 
 <a class="download-button" href="/en/docs/installation/">Download and Install OpooPress</a>
-
 
 ## Source Code
 You can access the source code at: [https://github.com/opoo/opoopress](https://github.com/opoo/opoopress)
