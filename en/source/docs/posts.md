@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: Writing posts
+title: Writing Posts
 url: /docs/posts/
 index: 70
 group: "CONTENT"

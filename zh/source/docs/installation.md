@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: 下载安装
+title: 安装指南
 url: /docs/installation/
 index: 20
 group: "安装配置"
@@ -15,7 +15,7 @@ group: "安装配置"
 
 ## 一、安装 Java
 
-### 1.1 Windows
+### 1.1 Oracle JDK for Windows
 1. 在 [Oracle Java 网站](http://www.oracle.com/technetwork/java/javase/downloads/index.html)下载 Java SE Development Kit(JDK)。进入下载页面后需要点击 "Accept License Agreement" 才能下载。根据您操作系统环境选择 Windows x86 或者 Windows x64 版本。
 2. 执行下载的 exe 文件进行安装。安装过程会先安装 JDK，再安装 JRE，最好能将 Java 安装在没有空格的路径，如 JDK 安装在`C:\java\jdk1.7.0`，JRE 安装在 `C:\java\jre7`。
 3. 配置环境变量。打开 `系统属性`对话框，选择选项卡`高级`，点击`环境变量`按钮，打开`环境变量`对话框，在系统变量中：
@@ -23,16 +23,20 @@ group: "安装配置"
     - 添加变量 `CLASSPATH` 值为 `.;%JAVA_HOME%\lib\tools.jar;%JAVA_HOME%\lib\dt.jar`
     - 修改变量 `Path`，将值后增加字符串 `;%JAVA_HOME%\bin`
 4. 打开命令行窗口(按 Win 键 + R，输入 `cmd`)，运行 `java -version` 命令检验是否正确地安装了 Java。
-5. 更多细节请访问 [JDK Installation for Microsoft Windows](http://docs.oracle.com/javase/7/docs/webnotes/install/windows/jdk-installation-windows.html)。
+5. 更多请参考文档 [JDK Installation for Microsoft Windows](http://docs.oracle.com/javase/7/docs/webnotes/install/windows/jdk-installation-windows.html)。
 
-### 1.2 Linux
-1. 以 CentOS 为例，执行命令 `yum install java-1.7.0-openjdk java-1.7.0-openjdk-devel` 安装 `OpenJDK 1.7.0`。
+### 1.2 Oracle JDK for Linux
+
+请参考文档 [JDK 7 Installation for Linux Platforms](http://docs.oracle.com/javase/7/docs/webnotes/install/linux/linux-jdk.html)。
+
+### 1.3 OpenJDK on CentOS
+1. 执行命令 `yum install java-1.7.0-openjdk java-1.7.0-openjdk-devel` 安装 `OpenJDK 1.7.0`。
 2. 在命令行终端中设置环境变量 JAVA_HOME, CLASSPATH 和 Path，例如
     * `export JAVA_HOME=/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.19`
     * `export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar`
     * `export PATH=$PATH:$JAVA_HOME/bin`
-3. 运行 `java -version` 命令检验是否正确地安装了 Java。
-4. 其它 Linux 平台安装 JDK 请参考文档 [JDK 7 Installation for Linux Platforms](http://docs.oracle.com/javase/7/docs/webnotes/install/linux/linux-jdk.html)。
+3. 运行 `java -version` 命令检验是否正确地安装了 OpenJDK。
+
 
 <div class='note'>
   <h3>Linux 环境变量</h3>
@@ -93,6 +97,10 @@ export M2_HOME M2 PATH</pre>
 5. 运行 `mvn op:generate` 生成静态网站，生成的文件在 `target/public/site` 目录，指定站点 `-Dsite=siteX` 时则为 `target/public/siteX`。
 6. 运行 `mvn op:preview` 启动 Web 服务器进行预览，默认端口 `8080`，可通过参数 `-Dport=8989` 来更改。启动后在浏览器中打开 http://localhost:8080/ 即可看见网站效果。
 
+<div class='note'>
+   <p>要使用最新开发版的 OpooPress，请下载 <a href="http://www.opoopress.com/downloads/pom-SNAPSHOT.xml">http://www.opoopress.com/downloads/pom-SNAPSHOT.xml</a> 并改名为 <code>pom.xml</code>。</p>
+</div>
+
 ### 3.2 二次开发库
 1. 下载二次开发库，这是一个标准的 Java 工程，Maven 目录结构
     - 使用 git 工具: `git clone https://github.com/opoopress/opoopress-site.git`
@@ -103,3 +111,7 @@ export M2_HOME M2 PATH</pre>
 4. 运行 `mvn op:generate` 生成静态网站，生成的文件在 `target/public/site` 目录，指定站点 `-Dsite=siteX` 时则为 `target/public/siteX`。
 5. 运行 `mvn op:preview` 启动 Web 服务器进行预览，默认端口 `8080`，可通过参数 `-Dport=8989` 来更改。启动后在浏览器中打开 http://localhost:8080/ 即可看见网站效果。
 6. 运行 `mvn eclipse:eclipse` 生成 Eclipse 工程文件，然后可以使用 Eclipse 打开进行二次开发了。开发完成，需要运行 `mvn package` 重新打包，然后运行各项 `mvn op:xxx` 命令。
+
+<div class='note'>
+   <p>要使用最新开发版的 OpooPress，请将工程根目录下的 <code>pom-SNAPSHOT.xml</code> 改名为 <code>pom.xml</code>，或者运行 mvn 命令时使用参数 <code>-f</code>，例如 <code>mvn -f pom-SNAPSHOT.xml op:build</code>。</p>
+</div>

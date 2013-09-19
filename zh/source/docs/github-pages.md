@@ -128,3 +128,5 @@ deploy_server: {id: "github", url: "github://github.com/opoo/opoo.github.io/", b
 3. 运行 `mvn op:deploy` 发布
 
 这是一个成功发布的 OpooPress 示例：[http://opoo.github.io/](http://opoo.github.io/)。
+
+

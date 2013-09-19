@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: Creating pages
+title: Creating Pages
 url: /docs/pages/
 index: 100
 group: "CONTENT"
