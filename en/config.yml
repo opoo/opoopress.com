@@ -125,7 +125,7 @@ excerpt_separator: "<!--more-->"
 titlecase: true
 
 # Main navigation
-navs: {"Blog": "/en/", "Download": "/en/docs/installation/", "Documentation": "/en/docs/", "Help": "/en/help/", "Source Code": "https://github.com/opoo/opoopress"}
+navs: {"Blog": "/en/", "Download": "/en/download/", "Documentation": "/en/docs/", "Help": "/en/help/", "Source": "https://github.com/opoo/opoopress"}
 #, "中文站点": "/zh/"
 
 # list each of the sidebar modules you want to include, in the order you want them to appear.

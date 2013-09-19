@@ -125,7 +125,7 @@ excerpt_separator: "<!--more-->"
 titlecase: true
 
 # 主导航菜单
-navs: {"博客": "/zh/", "下载": "/zh/docs/installation/", "文档": "/zh/docs/", "帮助": "/zh/help/", "源码": "https://github.com/opoo/opoopress"}
+navs: {"博客": "/zh/", "下载": "/zh/download/", "文档": "/zh/docs/", "帮助": "/zh/help/", "源码": "https://github.com/opoo/opoopress"}
 #, "English": "/en/"
 
 # 侧边栏默认包含的模板数组。
