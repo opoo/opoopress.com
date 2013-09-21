@@ -72,7 +72,7 @@ You hava two choice to install and initialize an OpooPress blog.
 5. Run `mvn op:generate` to generate static site. All generated files will be stored in `target/public/site`. If you use the option `-Dsite=siteX`, the directory will be `target/public/siteX`.
 6. Run `mvn op:preview` to start a web server with default port `8080`, then open http://localhost:8080/ in browser to preview your blog. The web server listening port can be changed by option `-Dport`, such as `-Dport=8989`.
 
-*Note: You can download <http://www.opoopress.com/downloads/pom-SNAPSHOT.xml> to use the lastest snapshot of OpooPress.*
+*Note: You can download <http://www.opoopress.com/downloads/pom-SNAPSHOT.xml> to use the lastest snapshot of OpooPress. Also see [How to use OpooPress snapshots](../../faqs/how-to-use-opoopress-snapshots/).*
 
 ### 3.2 Secondary Develop Project for Developer
 1. Download secondary develop project from GitHub.com
@@ -85,4 +85,4 @@ You hava two choice to install and initialize an OpooPress blog.
 5. Run `mvn op:preview` to start a web server with default port `8080`, then open http://localhost:8080/ in browser to preview your blog. The web server listening port can be changed by option `-Dport`, such as `-Dport=8989`.
 6. Run `mvn eclipse:eclipse` to generate `.project` and `.classpath`, import to Eclipse IDE, then you can develop your custom plugin or other functionalities. You must run `mvn package` to make your functionalities effective.
 
-*Note: You can rename	`pom-SNAPSHOT.xml` to `pom.xml` to use the lastest snapshot of OpooPress.*
+*Note: You can rename	`pom-SNAPSHOT.xml` to `pom.xml` to use the lastest snapshot of OpooPress. Also see [How to use OpooPress snapshots](../../faqs/how-to-use-opoopress-snapshots/).*

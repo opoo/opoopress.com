@@ -35,44 +35,41 @@ public interface Registry {
 }
 ~~~
 
-可见，要自定义插件，主要就是实现 `Plugin` 接口 的 `initialize()` 方法。在该方法中，开发者可以调用 `Registry` 对象注册自定义的组件。这些自定义的组件包括：Converter、Generator、SiteFilter、TemplateModel、TemplateLoader 等。
+To develop a custom OpooPress plugin, we need write a `Plugin` class and register our custom `plugin components` in it. There are 5 plugin components: Converter, Generator, SiteFilter, TemplateModel, TemplateLoader.
 
 ### Converter
-For converter.
+Source file format converter.
 
-主要用来转化博客或者网站的源文件。OpooPress 默认支持 `Markdown` 和 `Textile` 格式，分别由 `org.opoo.press.converter.TxtmarkMarkdownConverter` 和 `org.opoo.press.converter.TextilejConverter` 进行处理。
+OpooPress supports `Markdown` (`org.opoo.press.converter.TxtmarkMarkdownConverter`) and `Textile` (`org.opoo.press.converter.TextilejConverter`).
 
-开发者可自定义 Converter 来替换现有的转化器，或者支持新格式。例如可以开发 `WikiConverter` 用于支持 `*.wiki` 文件的处理。
+You can write a Converter to processing particular format, such as writing `WikiConverter` to processing file `*.wiki`.
 
-该接口的定义详见源文件 [Converter.java](https://github.com/opoo/opoopress/blob/master/core/src/main/java/org/opoo/press/Converter.java)。示例可参考 [TxtmarkMarkdownConverter.java](https://github.com/opoo/opoopress/blob/master/core/src/main/java/org/opoo/press/converter/TxtmarkMarkdownConverter.java)。
+The source of the interface is [Converter.java](https://github.com/opoo/opoopress/blob/master/core/src/main/java/org/opoo/press/Converter.java). Also see [TxtmarkMarkdownConverter.java](https://github.com/opoo/opoopress/blob/master/core/src/main/java/org/opoo/press/converter/TxtmarkMarkdownConverter.java).
 
 ### Generator
-Site generator.
+Site generator. 
 
-主要用于生成特定的输出页面，如 博客首页分页页面、标签页面、分类目录页面等。
+Using to generate output pages, such as blog index page, tag pages, category pages.
 
-开发者可以自定义 Generator 来生成所需的页面，例如生成站点地图文件 `sitemap.xml` 和 `sitemaps.html`。
-
-该接口的定义详见源文件 [Generator.java](https://github.com/opoo/opoopress/blob/master/core/src/main/java/org/opoo/press/Generator.java)，示例可参考 [CategoryGenerator.java](https://github.com/opoo/opoopress/blob/master/core/src/main/java/org/opoo/press/generator/CategoryGenerator.java)。
+The source of interface is [Generator.java](https://github.com/opoo/opoopress/blob/master/core/src/main/java/org/opoo/press/Generator.java). Also see [CategoryGenerator.java](https://github.com/opoo/opoopress/blob/master/core/src/main/java/org/opoo/press/generator/CategoryGenerator.java).
 
 ### SiteFilter
 Site filter(site processor).
 
-用于在站点（site）生成引擎运行的各个阶段中插入自己的处理代码，这些可插入代码的点为 `setup`, `read`, `generate`, `reader`, `write`。
+Can hook your own processes in site generating. The hool points are `setup`, `read`, `generate`, `reader`, `write`.
 
-该接口的定义详见源文件 [SiteFilter.java](https://github.com/opoo/opoopress/blob/master/core/src/main/java/org/opoo/press/SiteFilter.java)，可查看 [SiteImpl 类源文件](https://github.com/opoo/opoopress/blob/master/core/src/main/java/org/opoo/press/impl/SiteImpl.java)了解 SiteFilter 是如何以及何时被调用的。
-
+The source of interface is [SiteFilter.java](https://github.com/opoo/opoopress/blob/master/core/src/main/java/org/opoo/press/SiteFilter.java). See [SiteImpl.java](https://github.com/opoo/opoopress/blob/master/core/src/main/java/org/opoo/press/impl/SiteImpl.java) to know how SiteFilter work.
 
 ### TemplateModel
 Custom FreeMarker template model.
 
-开发者可以通过这个机制自定义 FreeMarker 标签并注册，就可以在文章或者页面中调用这些标签。请阅读 [FreeMarker](http://freemarker.org/) 文档了解详情。
+Can develop custom FreeMarker tags and functions using this mechanism. Check [FreeMarker](http://freemarker.org/) documentation.
 
-TemplateModel 还可以用来自定义函数，同样注册后可在页面中调用。例如 [TitleCaseModel](https://github.com/opoo/opoopress/blob/master/core/src/main/java/org/opoo/press/template/TitleCaseModel.java)。
+E.g. [TitleCaseModel.java](https://github.com/opoo/opoopress/blob/master/core/src/main/java/org/opoo/press/template/TitleCaseModel.java).
 
 ### TemplateLoader
 
-Custome FreeMarker TemplateLoader。
+Custom FreeMarker TemplateLoader。
 
 
 ## DefaultPlugin

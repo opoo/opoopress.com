@@ -8,6 +8,7 @@
   <header>
     <h1 class="entry-title">${titlecase(page.title)}</h1>
     <#if (page.date)??><p class="meta"><#include "post/date.ftl">${ time }</p></#if>
+    <#if (page.path)??><div class="source"><a href="https://raw.github.com/opoo/opoopress.com/master/en/source${page.path}" target="_blank">Source of this page</a></div></#if>
   </header>
   </#if>
   <#nested>

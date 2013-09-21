@@ -3,14 +3,15 @@ layout: page
 title: Download OpooPress
 comments: true
 date: 2013-07-07 11:20
-updated: 2013-09-19 11:20
-sidebar: false
+updated: 2013-09-21 11:20
+sidebar: true
 footer: true
+asides: [docs_index.ftl]
 ---
 
 OpooPress static blog generator has been released as a maven plugin. This java tool is based on maven command line. 
-- Stable releases are available from [Maven Central](http://search.maven.org/#search%7Cga%7C1%7Corg.opoo.press)
-- Snapshot builds are available from [Sonatype OSS snapshots repository](https://oss.sonatype.org/index.html#nexus-search;quick~org.opoo.press)
+- Stable releases are available from [Maven Central][mc]
+- Snapshot builds are available from [Sonatype OSS snapshots repository][oss]
 
 Follow [Installation Instructions](../docs/installation/) to know how to install Java and Maven, and to know how to use OpooPress plugin to initialize, generate and deploy your blog or website.
 
@@ -21,13 +22,34 @@ OpooPress is an open-source software, of course you can download the source code
 ## Current Versions
 
 Current stable version : **1.0.1**
-- Binary : [Maven Central](http://search.maven.org/#search%7Cga%7C1%7Corg.opoo.press)
+- Binary : [Maven Central][mc]
 - Source : [tag: version-1.0.1](https://github.com/opoo/opoopress/tree/version-1.0.1)
 
 Current snapshot version: **1.0.2-SNAPSHOT**
-- Binary : [Sonatype OSS snapshots repository](https://oss.sonatype.org/content/repositories/snapshots/org/opoo/press/maven/plugins/opoopress-maven-plugin/1.0.2-SNAPSHOT/)
+- Binary : [Sonatype OSS snapshots repository][oss102]
 - Source : [branch: master](https://github.com/opoo/opoopress)
 
+<div class="note info">
+  <p>Also see <a href="../faqs/how-to-use-opoopress-snapshots/">How to use OpooPress snapshots</a>.</p>
+</div>
+
+## Packages
+- **opoopress-core**
+	- Core functionality package, include default theme and site templates.
+- **opoopress-support**
+	- Include compass compiler, blog previewer, etc.
+- **opoopress-maven-plugin**
+	- Maven plugin for OpooPress, defined several Mojo for mvn command line.
+	- [Basic usage](../docs/usage/)
+- **opoopress-mailet**
+	- A custom Mailet. It makes you could publish your OpooPress blog by Email.
+	- [Document](../docs/mailet/)
+- **opoopress-wagon-github**
+	- A custom Wagon that uses GitHub Java API (org.eclipse.egit.github.core) as lower level layer. It makes you could publish your OpooPress blog to GitHub Pages.
+	- [Document](../docs/github-pages/#opoopress-wagon-github)
+- **opoopress-wagon-git**
+	- A custom Wagon that uses Git Executable Command Line as lower level layer. It makes you could publish your OpooPress blog to GitHub Pages or other git repository.
+	- [Document](../docs/github-pages/#opoopress-wagon-git)
 
 ## Releases History
 * 2013-09-05 - 1.0.1 
@@ -60,3 +82,8 @@ Current snapshot version: **1.0.2-SNAPSHOT**
 
 ## Next Steps
 - [Installation Instructions](../docs/installation/)
+- [How to use OpooPress snapshots](../faqs/how-to-use-opoopress-snapshots/)
+
+[mc]: http://search.maven.org/#search%7Cga%7C1%7Corg.opoo.press "OpooPress from Maven Central"
+[oss]: https://oss.sonatype.org/index.html#nexus-search;quick~org.opoo.press "OpooPress snapshots from Sonatype OSS snapshots repository"
+[oss102]: https://oss.sonatype.org/content/repositories/snapshots/org/opoo/press/maven/plugins/opoopress-maven-plugin/1.0.2-SNAPSHOT/ "OpooPress 1.0.2-SNAPSHOT from Sonatype OSS snapshots repository"
