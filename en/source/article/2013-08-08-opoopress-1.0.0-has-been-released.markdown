@@ -48,9 +48,9 @@ OpooPress also have these features:
 # Getting Started
 The first package has be released. It's easy to set up and deploy.
 
-Released builds are available from [Maven Central](http://search.maven.org/#search%7Cga%7C1%7Corg.opoo.press), and snapshot packages are available from the [Sonatype OSS snapshots repository](https://oss.sonatype.org/content/repositories/snapshots/org/opoo/press/). Click the button below to know how to use them. 
+Stable releases are available from [Maven Central](http://search.maven.org/#search%7Cga%7C1%7Corg.opoo.press), and snapshot builds are available from the [Sonatype OSS snapshots repository](https://oss.sonatype.org/index.html#nexus-search;quick~org.opoo.press). Click the button below to know how to use them. 
 
-<a class="download-button" href="/en/docs/installation/">Download and Install OpooPress</a>
+<a class="download-button" href="/en/download/">Download and Install OpooPress</a>
 
 ## Source Code
 You can access the source code at: [https://github.com/opoo/opoopress](https://github.com/opoo/opoopress)

@@ -48,11 +48,11 @@ OpooPress 还包含以下一些特性：
 
 ## 如何开始
 
-OpooPress 第一版已经发布，[这篇文章](http://opoo.org/opoopress-1.0.0-has-been-released/)介绍了简单的用法。
+OpooPress 正式版已经发布，[这篇文章](http://opoo.org/opoopress-1.0.0-has-been-released/)介绍了简单的用法。
 
-OpooPress 正式发行包可在 [Maven Central](http://search.maven.org/#search%7Cga%7C1%7Corg.opoo.press) 库获取，最新开发包 SNAPSHOT 版本可在 [Sonatype OSS snapshots repository](https://oss.sonatype.org/content/repositories/snapshots/org/opoo/press/) 库获取，详细用法请点击下面的按钮。
+OpooPress 正式发行包可在 [Maven Central](http://search.maven.org/#search%7Cga%7C1%7Corg.opoo.press) 库获取，最新开发包 SNAPSHOT 版本可在 [Sonatype OSS snapshots repository](https://oss.sonatype.org/index.html#nexus-search;quick~org.opoo.press) 库获取，详细用法请点击下面的按钮。
 
-<a class="download-button" href="/zh/docs/installation/">OpooPress 下载及安装</a>
+<a class="download-button" href="/zh/download/">OpooPress 下载及安装</a>
 
 ### 源代码
 OpooPress 的源代码在：[https://github.com/opoo/opoopress](https://github.com/opoo/opoopress)
