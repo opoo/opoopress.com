@@ -99,6 +99,7 @@ export M2_HOME M2 PATH</pre>
 
 <div class='note'>
    <p>要使用最新开发版的 OpooPress，请下载 <a href="http://www.opoopress.com/downloads/pom-SNAPSHOT.xml">http://www.opoopress.com/downloads/pom-SNAPSHOT.xml</a> 并改名为 <code>pom.xml</code>。</p>
+   <p>请阅读文档 <a href="../../faqs/how-to-use-opoopress-snapshots/">如何使用 OpooPress 开发版 (SNAPSHOT)</a>。</p>
 </div>
 
 ### 3.2 二次开发库
@@ -114,4 +115,5 @@ export M2_HOME M2 PATH</pre>
 
 <div class='note'>
    <p>要使用最新开发版的 OpooPress，请将工程根目录下的 <code>pom-SNAPSHOT.xml</code> 改名为 <code>pom.xml</code>，或者运行 mvn 命令时使用参数 <code>-f</code>，例如 <code>mvn -f pom-SNAPSHOT.xml op:build</code>。</p>
+   <p>请阅读文档 <a href="../../faqs/how-to-use-opoopress-snapshots/">如何使用 OpooPress 开发版 (SNAPSHOT)</a>。</p>
 </div>

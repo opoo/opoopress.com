@@ -4,6 +4,7 @@
       <h1 class="entry-title"><a href="${ root_url }${ post.url }">${titlecase(post.title)}</a></h1>
 	<#else>
       <h1 class="entry-title">${titlecase(page.title)}</h1>
+      <#if (page.path)??><div class="source"><a href="https://raw.github.com/opoo/opoopress.com/master/zh/source${page.path}" target="_blank">本页源文件</a></div></#if>
 	</#if>
 
 	<#if (page.meta)!true == true>

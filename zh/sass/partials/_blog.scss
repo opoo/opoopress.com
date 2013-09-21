@@ -27,6 +27,13 @@ article {
       padding-bottom: 1em;
       background: $img-border bottom left repeat-x;
     }
+
+    .source{
+	float: right;
+	font-size: 0.6em;
+	a { text-decoration: none;
+        &:hover { text-decoration: underline; } }
+    }
   }
   h2 {
     padding-top: 0.8em;

@@ -8,7 +8,7 @@ group: "发布"
 
 OpooPress 可通过多种方式发布。大部分是通过 [Apache Maven Wagon](http://maven.apache.org/wagon/) 实现的。可参考 Apache Maven Wagon 文档了解更多细节。
 
-当前文档涉及到非常多的 Apache Maven 知识。
+**注意**: 当前文档涉及到非常多的 Apache Maven 知识。
 
 ## 一、常见发布方式
 - File

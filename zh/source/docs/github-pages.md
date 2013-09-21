@@ -4,6 +4,8 @@ title: 发布到 GitHub Pages
 url: /docs/github-pages/
 index: 800
 group: "发布"
+description: "本文主要介绍如何将静态博客 OpooPress 发布到 GitHub Pages 及普通 git 库。其中详细讲解了三种发布方式:  opoopress-wagon-github, opoopress-wagon-git 以及 wagon-scm + maven-scm-provider-gitexe。"
+keywords: "OpooPress, GitHub Pages, 发布, deploy"
 ---
 
 [GitHub Pages](http://pages.github.com) 是一个为用户、组织或者项目提供网站主机的网络服务。该服务提供 [github.io](http://github.io) 的二级域名，用户也可以绑定自己注册的域名。GitHub Pages 服务是*免费*的，支持常规的 HTML 内容，所以将 OpooPress 博客或者网站发布到 GitHub Pages 是一个非常好的选择。
@@ -310,5 +312,9 @@ $ mvn op:deploy
 ```
 
 <h4 id="wagon-scm--maven-scm-provider-gitexe-known-issues"> 2.3.2 已知问题</h4>
-wagon-scm 在调用时，每次都会创建新的临时文件夹，检出、复制文件并提交（push），然后删除文件夹，目前发现的问题是，如果当前博客没有纳入 git 版本管理（即博客根目录下没有 `.git` 目录），则在创建新的临时文件夹并检出是报错，显示找不到上级目录。
+调用 wagon-scm 时，每次都会创建新的临时文件夹，检出、复制文件并提交（push），然后删除文件夹。目前发现的问题是，如果当前博客没有纳入 git 版本管理（即博客根目录下没有 `.git` 目录），则在创建新的临时文件夹并检出时报错，显示找不到上级目录。
 
+<div class="note">
+  <h3>注意</h3>
+  <p>文中引入了 snapshot（开发版）包 （1.0.2-SNAPSHOT），该包在 Sonatype OSS Snapshots 库中，请阅读文档 <a href="../../faqs/how-to-use-opoopress-snapshots/">如何使用 OpooPress 开发版 (SNAPSHOT)</a>。</p>
+</div>
