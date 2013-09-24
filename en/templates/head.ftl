@@ -6,17 +6,8 @@
   <meta charset="utf-8">
   <title><#if (page.title)??>${page.title} - </#if>${site.title}</title>
   <meta name="author" content="${site.author}">
-<#if page.description??>
-	<#assign description = page.description >  
-<#-- elseif content?? -->
-	<#-- assign description = content?substring(0,150) -->
-<#elseif site.description??>
-	<#assign description = site.description>
-</#if>
-<#if description??>
-  <meta name="description" content="${description}">
-</#if>
-  <#if page.keywords??><meta name="keywords" content="${ page.keywords }"><#elseif site.keywords??><meta name="keywords" content="${ site.keywords }"></#if>
+  <#if site.description?? && (page.url == "/")><meta name="description" content="${site.description}"><#elseif page.description??><meta name="description" content="${page.description}"></#if>
+  <#--if page.keywords??><meta name="keywords" content="${ page.keywords }"></#if-->
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
   <meta name="OpooPressSiteRoot" content="${ root_url }">

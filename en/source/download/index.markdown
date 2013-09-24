@@ -4,9 +4,9 @@ title: Download OpooPress
 comments: true
 date: 2013-07-07 11:20
 updated: 2013-09-21 11:20
-sidebar: true
+sidebar: false
 footer: true
-asides: [docs_index.ftl]
+#asides: [docs_index.ftl]
 ---
 
 OpooPress static blog generator has been released as a maven plugin. This java tool is based on maven command line. 
