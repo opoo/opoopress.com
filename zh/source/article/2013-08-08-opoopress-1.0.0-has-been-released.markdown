@@ -39,7 +39,7 @@ OpooPress 还包含以下一些特性：
 - WordPress
 
 ### 发布方式
-- File - *发布到指定的目录(本机或者共享磁盘)*
+- File
 - HTTP
 - FTP
 - SSH/SCP

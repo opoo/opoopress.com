@@ -6,7 +6,7 @@ date: 2013-07-07 11:20
 updated: 2013-09-19 11:20
 sidebar: true
 footer: true
-description: "介绍 OpooPress 静态博客生成器的下载地址、最新版本、发行历史以及各个版本的发行说明（包括变更列表）。"
+description: "介绍 OpooPress 静态博客生成器的下载地址、最新版本、包说明、发行历史以及各个版本的发行说明（包括变更列表）。"
 keywords: "OpooPress, 下载地址, 最新版本, 发行说明, 发行历史"
 asides: [docs_index.ftl]
 ---
