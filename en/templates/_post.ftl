@@ -13,6 +13,7 @@
       <#include "post/author.ftl">
       <#include "post/date.ftl"><#if was_updated??>${updated}<#else>${time}</#if>
       <#include "post/categories.ftl">
+      <#if (page.path)??><span class="categories"><a href="${site.source_base_path}${page.path}" target="_blank">${site.source_link}</a></span></#if>
     </p>
 	<#if (page.sharing)!true == true>
       <#include "post/sharing.ftl">

@@ -8,20 +8,16 @@
   <header>
     <h1 class="entry-title">${titlecase(page.title)}</h1>
     <#if (page.date)??><p class="meta"><#include "post/date.ftl">${ time }</p></#if>
-    <#if (page.path)??><div class="source"><a href="https://raw.github.com/opoo/opoopress.com/master/en/source${page.path}" target="_blank">Source of this page</a></div></#if>
   </header>
   </#if>
   <#nested>
   <#if (page.footer)!true == true>
     <footer>
-      <#if (page.date)?? || (page.author)?? ><p class="meta">
-        <#if (page.author)?? ><#include "post/author.ftl"></#if>
-        <#include "post/date.ftl"><#if was_updated??>${updated}<#else>${time}</#if>
-        <#if (page.categories)?? ><#include "post/categories.ftl"> </#if>
-      </p></#if>
-      <#if (page.sharing)!true == true>
-        <#include "post/sharing.ftl">
-	  </#if>
+      <p class="meta">
+	<#if (page.date)??><span class="byline"><#include "post/date.ftl"><#if was_updated??>${updated}<#else>${time}</#if></span></#if>
+	<#if (page.path)??><span class="categories"><a href="${site.source_base_path}${page.path}" target="_blank">${site.source_link}</a></span></#if>
+      </p>
+      <#if (page.sharing)!true == true><#include "post/sharing.ftl"></#if>
     </footer>
  </#if>
 </article>

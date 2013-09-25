@@ -6,3 +6,11 @@
 }
 
 #fb-root { display: none; }
+
+.pager {
+  p.meta + & {
+    padding: { top: 1px; left: 0; }
+    background: $img-border top left repeat-x;
+  }
+}
+
