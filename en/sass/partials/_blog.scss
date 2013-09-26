@@ -74,7 +74,7 @@ article {
     }
   }
   > footer {
-    padding-bottom: 2.5em;
+    padding-bottom: 1.5em;
     margin-top: 2em;
     @extend .sans;
     p.meta {
@@ -84,7 +84,7 @@ article {
       overflow: hidden;
       color: #666;
     }
-    .byline + time:before, time +time:before, .comments:before, .byline ~ .categories:before {
+    .byline + time:before, time +time:before, .comments:before, .byline ~ .categories:before, .byline ~ .tags:before {
       @extend .separator;
     }
   }
@@ -149,3 +149,8 @@ article + article {
 }
 
 .entry-content ul, .entry-content ol, article ul, article ol{margin-left:1.3em;}
+
+.related_posts ul {
+  padding-left: 1.5em;
+  margin-top: -10px;
+}

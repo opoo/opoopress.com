@@ -1,5 +1,9 @@
 <#if (site.google_plus_one)!false == true>
   <script type="text/javascript">
+      window.___gcfg = {
+        lang: 'zh-CN'
+      };
+
     (function() {
       var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
       script.src = 'https://apis.google.com/js/plusone.js';
