@@ -19,7 +19,7 @@
 
 <#macro source filepath>
 <span class="github-btn">
-  <a class="gh-btn" href="${site.source_base_path}${filepath}" target="_blank" title="查看本页源代码">
+  <a class="gh-btn" href="${site.source_base_path}${filepath}" target="_blank" title="查看本页源代码" rel="nofollow">
     <span class="gh-ico"></span>
     <span class="gh-text">Source</span>
   </a>

@@ -1,0 +1,13 @@
+---
+layout: post
+title: 'OpooPress 1.0.2 版本发布'
+date: '2013-10-22 18:30'
+comments: true
+categories: ['opoopress']
+---
+
+OpooPress 静态博客生成器 1.0.2 版本发布了！
+
+改版本的主要变化是将日志系统由 commons-logging 改为了 SLF4J，改进了相关文章的算法，增强了将 OpooPress 博客发布到 GitHub Pages 的功能。
+
+请在这里[查看详细的版本发行说明](/zh/download/#release-notes-v1.0.2)。

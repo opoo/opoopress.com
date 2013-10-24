@@ -1,7 +1,4 @@
-<#macro pageLayout>
-
-<#include "_default.ftl">
-<@defaultLayout>
+<#macro pageLayout><#include "_default.ftl"><@defaultLayout>
 <div>
 <article role="article">
   <#if (page.title)??>
@@ -12,12 +9,15 @@
   </#if>
   <#nested>
   <#if (page.footer)!true == true>
-<footer>
-      <p class="meta">
-	<#if (page.date)??><span class="byline"><#include "post/date.ftl"><#if was_updated??>${updated}<#else>${time}</#if></span></#if>
-	<#if (page.path)??><@i18n.source page.path></@i18n.source></#if>
-      </p>
-      <#if (page.sharing)!true == true><#include "post/sharing.ftl"></#if>
+    <footer>
+      <#if (page.date)?? || (page.author)?? ><p class="meta">
+        <#if (page.author)?? ><#include "post/author.ftl"></#if>
+        <#include "post/date.ftl"><#if was_updated??>${updated}<#else>${time}</#if>
+        <#if (page.categories)?? ><#include "post/categories.ftl"> </#if>
+      </p></#if>
+      <#if (page.sharing)!true == true>
+        <#include "post/sharing.ftl">
+	  </#if>
     </footer>
  </#if>
 </article>

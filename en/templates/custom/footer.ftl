@@ -1,4 +1,4 @@
 <p>
-  <@i18n.msg "Copyright"/> &copy; ${site.time?string("yyyy")} - <a href="http://opoo.org/">Alex Lin</a> -
-  <span class="credit"><@i18n.msg "Powered by"/> <a href="http://press.opoo.org/">OpooPress</a></span>
+  <@i18n.msg "Copyright"/> &copy; ${site.time?string("yyyy")} - <a href="//opoo.org/" target="_blank">${ site.author }</a> -
+  <span class="credit">Powered by <a href="http://www.opoopress.com/">OpooPress</a></span>
 </p>

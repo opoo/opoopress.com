@@ -21,12 +21,12 @@ OpooPress is an open-source software, of course you can download the source code
 
 ## Current Versions
 
-Current stable version : **1.0.1**
+Current stable version : **1.0.2**
 - Binary : [Maven Central][mc]
-- Source : [tag: version-1.0.1](https://github.com/opoo/opoopress/tree/version-1.0.1)
+- Source : [tag: version-1.0.2](https://github.com/opoo/opoopress/tree/version-1.0.2)
 
-Current snapshot version: **1.0.2-SNAPSHOT**
-- Binary : [Sonatype OSS snapshots repository][oss102]
+Current snapshot version: **1.0.3-SNAPSHOT**
+- Binary : [Sonatype OSS snapshots repository][oss103]
 - Source : [branch: master](https://github.com/opoo/opoopress)
 
 <div class="note info">
@@ -52,23 +52,28 @@ Current snapshot version: **1.0.2-SNAPSHOT**
 	- [Document](../docs/github-pages/#opoopress-wagon-git)
 
 ## Releases History
+* 2013-10-22 - 1.0.2 
 * 2013-09-05 - 1.0.1 
 * 2013-08-07 - 1.0.0
 
 
 ## Release Notes
 
-### OpooPress 1.0.2 (not release yet, since 1.0.1)
+<h3 id="release-notes-v1.0.2">OpooPress 1.0.2 (since 1.0.1)</h3>
 
 - Bug
 	- Fixed bug in StaleUtils: cannot check new file in `sass` subdirectory correctly
+	- Fixed date format error in `atom.xml` and `sitemap.xml`
 - Improvement
 	- Changed logging framwork from Apache Commons Logging to Simple Logging Facade for Java (SLF4J)
 	- Moved classes from plugin to a new module opoopress-wagon-github(a custom wagon), this wagon could make you deploy your OpooPress blog to GitHub Pages. It uses GitHub Java API (org.eclipse.egit.github.core, a pure java GitHub client) as lower level layer.
+	- New algorithm for finding related posts
+	- Improve the default theme
 - New Feature
 	- Added new custom wagon - opoopress-wagon-git, this wagon could make you deploy your OpooPress blog to GitHub Pages or any other git repositories. It uses Git Executable Command Line as lower level layer(a git command line client is required).
+	- Support multi-source directory
 
-### OpooPress 1.0.1 (since 1.0.0)
+<h3 id="release-notes-v1.0.1"> OpooPress 1.0.1 (since 1.0.0)</h3>
 - Bug
 	- Fixed bug in StaleUtils: cannot check new file in `assets` directory correctly
 - Change
@@ -76,8 +81,8 @@ Current snapshot version: **1.0.2-SNAPSHOT**
 	- Changed new post file storage path
 	- Changed new page file storage path
 
-### OpooPress 1.0.0
-- This is the first release of OpooPress. See [this article](../article/opoopress-1.0.0-has-been-released/) for details.
+<h3 id="release-notes-v1.0.0"> OpooPress 1.0.0</h3>
+- This is the first release of OpooPress.
 
 
 ## Next Steps
@@ -86,4 +91,4 @@ Current snapshot version: **1.0.2-SNAPSHOT**
 
 [mc]: http://search.maven.org/#search%7Cga%7C1%7Corg.opoo.press "OpooPress from Maven Central"
 [oss]: https://oss.sonatype.org/index.html#nexus-search;quick~org.opoo.press "OpooPress snapshots from Sonatype OSS snapshots repository"
-[oss102]: https://oss.sonatype.org/content/repositories/snapshots/org/opoo/press/maven/plugins/opoopress-maven-plugin/1.0.2-SNAPSHOT/ "OpooPress 1.0.2-SNAPSHOT from Sonatype OSS snapshots repository"
+[oss103]: https://oss.sonatype.org/content/repositories/snapshots/org/opoo/press/maven/plugins/opoopress-maven-plugin/1.0.3-SNAPSHOT/ "OpooPress 1.0.3-SNAPSHOT from Sonatype OSS snapshots repository"

@@ -4,12 +4,12 @@
     <li><a href="${ site.subscribe_email }" rel="subscribe-email" title="subscribe via email">Email</a></li>
   </#if>
 </ul>
-<#if site.simple_search??>
+  <#if site.simple_search??>
 <form action="${ site.simple_search }" method="get">
   <fieldset role="search">
     <input type="hidden" name="q" value="site:${ site.url}" />
     <input class="search" type="text" name="q" results="0" placeholder="<@i18n.msg 'Search'/>"/>
   </fieldset>
 </form>
-</#if>
+ </#if>
 <#include "custom/navigation.ftl">

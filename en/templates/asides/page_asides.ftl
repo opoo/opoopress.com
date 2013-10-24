@@ -2,10 +2,6 @@
 <#list site.page_asides as f>
 	<#include f>
 </#list>
-<#elseif page?? && page.asides??>
-<#list page.asides as f>
-	<#include f>
-</#list>
 <#else>
 <#include "default_asides.ftl">
 </#if>
