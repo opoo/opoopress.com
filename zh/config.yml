@@ -67,13 +67,15 @@ keywords: "java, 静态博客生成器, 静态网站生成器, OpooPress, 博客
 date_format: "ordinal"
 
 # RSS 订阅使用的 URL
-subscribe_rss: http://www.opoopress.com/cn/atom.xml
+subscribe_rss: http://www.opoopress.com/zh/atom.xml
 subscribe_email:
 # RSS feeds can list your email address if you like
 email:
 
 # 如果发布到子目录如 http://site.com/project 则设置 'root: /project'
 root: /zh
+theme_root: '//static.opoo.org/themes/classic-white-op'
+default_theme_root: '//static.opoo.org/themes/default'
 
 # 固定链接支持的变量 ：
 # 		post 的 front-matter 头部变量 ，以及 ${year}, ${month}, ${day}, ${hour}, ${minute}, ${second}, ${name}, ${pathToFile}, ${fileName} 
@@ -125,7 +127,7 @@ excerpt_separator: "<!--more-->"
 titlecase: true
 
 # 主导航菜单
-navs: {"博客": "/zh/", "下载": "/zh/download/", "文档": "/zh/docs/", "帮助": "/zh/help/", "源码": "https://github.com/opoo/opoopress"}
+navs: {"首页": "/zh/", "博客": "/zh/blog/", "下载": "/zh/download/", "文档": "/zh/docs/", "帮助": "/zh/help/", "源码": "https://github.com/opoo/opoopress"}
 #, "English": "/en/"
 
 # 侧边栏默认包含的模板数组。
@@ -138,6 +140,9 @@ default_asides: [recent_posts.ftl, recent_comments.ftl]
 # post_asides:
 # 普通页面侧边栏包含的模板，未设置使用 default_asides
 # page_asides: [docs_index.ftl]
+
+source_base_path: https://raw.github.com/opoo/opoopress.com/master/zh/source
+source_link: 本页源码
 
 
 # ----------------------- #
@@ -216,8 +221,8 @@ generators:
   
 # siteFilters:
 #  - org.opoo.press.filter.SampleSiteFilter
-siteFilters:
- - org.opoo.press.filter.FixUrlSiteFilter
+#siteFilters:
+# - org.opoo.press.filter.FixUrlSiteFilter
 
 # SlugHelper
 slugHelper: org.opoo.press.slug.ChineseToPinyinSlugHelper

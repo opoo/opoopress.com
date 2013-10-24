@@ -74,6 +74,8 @@ email:
 
 # If publishing to a subdirectory as in http://site.com/project set 'root: /project'
 root: /en
+theme_root: '//static.opoo.org/themes/classic-white-op'
+default_theme_root: '//static.opoo.org/themes/default'
 
 # Permalink style supports variables：
 # 		The fron-matter headers of post, and ${year}, ${month}, ${day}, ${hour}, ${minute}, ${second}, ${name}, ${pathToFile}, ${fileName} 
@@ -125,13 +127,13 @@ excerpt_separator: "<!--more-->"
 titlecase: true
 
 # Main navigation
-navs: {"Blog": "/en/", "Download": "/en/download/", "Documentation": "/en/docs/", "Help": "/en/help/", "Source": "https://github.com/opoo/opoopress"}
+navs: {"Home": "/en/", "Blog": "/en/blog/", "Download": "/en/download/", "Documentation": "/en/docs/", "Help": "/en/help/", "Source": "https://github.com/opoo/opoopress"}
 #, "中文站点": "/zh/"
 
 # list each of the sidebar modules you want to include, in the order you want them to appear.
 # To add custom asides, create files in 'site/templates/asides' or 'site/source/_templates/asides' 
 # and add them to the list like 'custom_aside_name.ftl'
-default_asides: [recent_posts.ftl, github.ftl, delicious.ftl, pinboard.ftl, googleplus.ftl, categories.ftl]
+default_asides: [recent_posts.ftl, github.ftl, delicious.ftl, pinboard.ftl, googleplus.ftl, recent_comments.ftl]
 
 # Each layout uses the default asides, but they can have their own asides instead. Simply uncomment the lines below
 # and add an array with the asides you want to use.
@@ -139,6 +141,8 @@ default_asides: [recent_posts.ftl, github.ftl, delicious.ftl, pinboard.ftl, goog
 # post_asides:
 # page_asides:
 
+source_base_path: https://raw.github.com/opoo/opoopress.com/master/en/source
+source_link: Source
 
 # ----------------------- #
 #   3rd Party Settings    #
@@ -151,11 +155,11 @@ github_show_profile_link: false
 github_skip_forks: true
 
 # Twitter
-twitter_user:
-twitter_tweet_button: false
+twitter_user: alexlincn
+twitter_tweet_button: true
 
 # Google +1
-google_plus_one: false
+google_plus_one: true
 google_plus_one_size: medium
 
 # Google Plus Profile
@@ -216,8 +220,8 @@ generators:
   
 # siteFilters:
 #  - org.opoo.press.filter.SampleSiteFilter
-siteFilters:
- - org.opoo.press.filter.FixUrlSiteFilter
+#siteFilters:
+# - org.opoo.press.filter.FixUrlSiteFilter
 
 # SlugHelper
 slugHelper: org.opoo.press.slug.ChineseToPinyinSlugHelper

@@ -23,6 +23,8 @@ local.properties
 .settings/
 .loadpath
 github*
+site
+common
 
 **/stylesheets/screen.css
 
