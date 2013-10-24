@@ -1,0 +1,16 @@
+User-agent: *
+Disallow: /sitemap.xml
+
+Disallow: /en/tag/
+Disallow: /en/category/
+Disallow: /en/downloads/
+Disallow: /en/atom.xml
+Disallow: /en/archives/
+
+Disallow: /zh/tag/
+Disallow: /zh/category/
+Disallow: /zh/downloads/
+Disallow: /zh/atom.xml
+Disallow: /zh/archives/
+
+Sitemap: http://www.opoopress.com/sitemap.xml 

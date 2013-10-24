@@ -1,0 +1,308 @@
+// This File is imported last, and will override other styles in the cascade
+// Add styles here to make changes without digging in too much
+
+.syntaxhighlighter {
+  border: 1px solid $pre-border;
+  @include border-radius(.4em);
+  //background: $pre-bg $noise-bg;
+  @include box-shadow(rgba(#000, .06) 0 0 10px);
+}
+
+body {
+  //for not supported ie 
+  //background:#fff;
+  //box-shadow: 0 2px 6px rgba(100, 100, 100, 0.4);
+  @include box-shadow(rgba(100, 100, 100, 0.6) 0 2px 6px, rgba(100, 100, 100, 0.6) 0 1px 3px inset);
+  //@include border-top-radius(.4em);
+}
+
+@media only screen and (min-width: 992px) {
+  article h1 {font-size: 1.4em;}
+  article header h1 {font-size: 1.6em;}
+}
+
+#blog-archives article footer {font-size: 0.9em;}
+
+div.pagination span.current-page{
+    background: #bbb;
+    display: inline-block;
+    padding: .4em .8em;
+    margin-right: .5em;
+    text-decoration: none;
+    color: #fff;
+    @extend .serif;
+}
+div.pagination span.nolink-page{
+    background: #eeeeee;
+    display: inline-block;
+    padding: .4em .8em;
+    margin-right: .5em;
+    text-decoration: none;
+    color: #666;
+    @extend .serif;
+}
+div.pagination span.pagebar{float:left;}
+
+//#blog-archives .entry-title{font-size:1.1em;}
+//#blog-archives article footer{font-size:0.85em;}
+
+.no-sidebar .sidebar {display: none;}
+
+
+
+/* Unsupported browser */
+.unsupported-browser {
+	padding:15px 0;
+	color:#211e14;
+	background-color:#fae692;
+	background-repeat:repeat-x;
+	border-bottom:1px solid #b3a569;
+	@include background-image(linear-gradient(#feefae, #fae692));
+}
+.unsupported-browser .container {
+	background:image-url("ie-notice.png") no-repeat
+}
+.unsupported-browser h5 {
+	font-size:13px;
+	padding-left:48px
+}
+.unsupported-browser p {
+	margin:0;
+	padding-left:48px
+}
+.unsupported-browser .button {
+	float:right;
+	padding:5px 9px;
+	margin-top:15px;
+	color:#fff;
+	background-color:#b3a569;
+	background-image:none
+}
+.unsupported-browser .button:hover {
+	text-decoration:none;
+	background-color:#9b8c4e
+}
+
+/* ul chidren */
+ul.children1 {padding-left:1.5em;}
+ul.children2 {padding-left:1.8em;}
+ul.children3 {padding-left:2.1em;}
+
+#tags {
+	/* color: #888; */
+	padding: 6px 0px;
+}
+
+#tags li {
+	display: inline-block;
+	//background: #F7F7F7;
+	padding: 3px;
+	line-height: 100%;
+	@include border-radius(3px);
+	border: solid 1px #CCCCCC;
+	border-color: rgba(0, 0, 0, .2);
+	margin: 2px 0;
+}
+
+#tags li a {
+	text-decoration: none;
+}
+
+.right {
+	float:right;
+}
+
+.count{
+	//background: #bbb;
+	background-color: #bbb;
+	@include border-radius(3px);
+	color: #fff;
+	font-size: 90%;
+	font-weight: normal;
+	padding: 0.1px .8ex;
+	margin-left:0.5em;
+}
+
+
+/* Download Button */
+.download-button{
+    background: darken($main-bg, 5);
+    display: inline-block;
+    padding: .4em .8em;
+    margin-right: .5em;
+    text-decoration: none;
+    color: mix($text-color, $text-color-light);
+    @extend .serif;
+    @include transition(background-color .5s);
+    &:hover {
+      background: $link-color-hover;
+      text-shadow: none;
+      color: $main-bg;
+    }
+  }
+
+
+article li em {color: #666;}
+
+
+/* Note, Info & Warning*/
+@mixin note-background($bg-color1, $bg-color2){
+  $experimental-support-for-svg: true;
+  background-color: $bg-color1;
+  @include background(linear-gradient(top,  $bg-color1 0%, $bg-color2 100%));
+  background: -ms-linear-gradient(top,  $bg-color1 0%, $bg-color2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$bg-color1}', endColorstr='#{$bg-color2}',GradientType=0 );
+}
+
+.note > code {
+  background: #f2f2f2;
+  //color: #fff;
+  //border-radius: 5px;
+  box-shadow: inset 0 1px 10px rgba(0,0,0,.3), 0 1px 0 rgba(255,255,255,.1), 0 -1px 0 rgba(0,0,0,.5);
+  //@include box-shadow(rgba(100, 100, 100, 0.6) 0 2px 6px, rgba(100, 100, 100, 0.6) 0 1px 3px inset);
+  @include border-radius(3px);
+}
+
+.note code {
+ // background-color: rgba(0,0,0,0.1);
+  margin-left: 2.5px;
+  margin-right: 2.5px;
+  //font-size: 0.8em;
+  @include border-radius(3px);
+}
+/* Note types */
+
+.note {
+  margin: 30px 0;
+  margin-left: -35px;
+  padding: 20px 20px 24px;
+  padding-left: 50px;
+  border-radius: 0 5px 5px 0;
+  position: relative;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, .3), inset 0 1px 0 rgba(255,255,255,.2), inset 0 -1px 0 rgba(0,0,0,.3);
+  //@include note-background(#7e6d42, #5c4e35);
+  @include note-background(#f2f2f2, #ffffff);
+}
+
+@media (max-width: 568px){
+  .note {
+    margin-right: -30px;
+  }
+}
+
+@media (min-width: 768px){
+  .note {
+    margin-left: -45px;
+  }
+} 
+
+@media (min-width: 992px){
+  .note {
+    margin-left: -65px;
+  }
+}
+
+.note:before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 0px;
+  border-color: transparent #999 #999 transparent;
+  //border-color: transparent #f2f2f2 #f2f2f2 transparent;
+  border-style: solid;
+  border-width: 5px;
+  width: 0;
+  height: 0;
+}
+
+.note p {
+  font-weight: 400;
+  font-size: .9em;
+}
+
+
+.info {
+  @include note-background(#f2f2f2, #fff);
+}
+
+.warning {
+  @include note-background(#f2f2f2, #fff);
+}
+
+//.info:before {  border-color: transparent #00617f #00617f transparent;}
+
+//.warning:before {  border-color: transparent #6f0d0d #6f0d0d transparent;}
+
+.note:after {
+  content: "\2605";
+  color: #fc0;
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  font-size: 28px;
+  font-weight: bold;
+  text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+}
+
+.info:after {
+  content: "\24d8";
+  color: #fc0;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 28px;
+  font-weight: bold;
+  text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+}
+
+.warning:after {
+  content: "\203C";
+  color: #fc0;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 32px;
+  font-weight: bold;
+  text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+}
+
+section.menu li.current a:before {
+	content: "";
+	border-color: transparent transparent transparent #1863a1;//444;
+	border-style: solid;
+	border-width: 7px;
+	width: 0;
+	height: 0;
+	position: absolute;
+	//top: 0;
+	//left: -30px;
+	margin-left: -18px;
+	margin-top: 3px;
+}
+
+section.menu li{
+	padding-left:20px;
+	border-bottom: 0px solid #ededed;
+}
+
+section.menu a{
+	text-decoration: none;
+}
+
+
+article.doc-article header{
+	padding-top: 0;
+}
+
+.docs-nav .next:after {
+  content: "\203a";
+  right: 10px;
+}
+
+.docs-nav .prev:before {
+  content: "\2039";
+  left: 10px;
+}
+
+div .clear{clear:both;}
+
