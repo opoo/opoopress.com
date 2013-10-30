@@ -61,4 +61,6 @@ OpooPress 的源代码在：[https://github.com/opoo/opoopress](https://github.c
 
 如果您有改进代码需要提交，可以在 GitHub 代码库中向我发送一个 pull request。
 
-有任何建议或意见，也欢迎您通过 Email 联系我：`opoo#users.sf.net`，或在该文章下留言，谢谢。
+有任何建议或意见，也欢迎您通过 Email 联系我：`opoo#users.sf.net`，也可在相应页面下留言，或者加入 QQ 群，谢谢。
+
+<a target="_blank" href="http://wp.qq.com/wpa/qunwpa?idkey=b6e7956637297e1fbdea8d93c35780cf4db2319a362a4633855e769d1386400d"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="OpooPress" title="OpooPress"></a>
