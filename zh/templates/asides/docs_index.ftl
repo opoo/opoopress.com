@@ -15,3 +15,4 @@
 
 </section>
 </#if>
+<#include "about.ftl">
