@@ -21,12 +21,12 @@ OpooPress is an open-source software, of course you can download the source code
 
 ## Current Versions
 
-Current stable version : **1.0.2**
+Current stable version : **1.0.3**
 - Binary : [Maven Central][mc]
-- Source : [tag: version-1.0.2](https://github.com/opoo/opoopress/tree/version-1.0.2)
+- Source : [tag: version-1.0.3](https://github.com/opoo/opoopress/tree/version-1.0.3)
 
-Current snapshot version: **1.0.3-SNAPSHOT**
-- Binary : [Sonatype OSS snapshots repository][oss103]
+Current snapshot version: **1.1.0-SNAPSHOT**
+- Binary : [Sonatype OSS snapshots repository][oss]
 - Source : [branch: master](https://github.com/opoo/opoopress)
 
 <div class="note info">
@@ -52,12 +52,19 @@ Current snapshot version: **1.0.3-SNAPSHOT**
 	- [Document](../docs/github-pages/#opoopress-wagon-git)
 
 ## Releases History
+* 2013-11-20 - 1.0.3
 * 2013-10-22 - 1.0.2 
 * 2013-09-05 - 1.0.1 
 * 2013-08-07 - 1.0.0
 
 
 ## Release Notes
+
+<h3 id="release-notes-v1.0.3">OpooPress 1.0.3 (since 1.0.2)</h3>
+
+- Bug
+	- Fixed [Issue #3](https://github.com/opoo/opoopress/issues/3): artifact `com.github.jnr:jnr-x86asm` always checking for updates from central
+	- Fix directory monitor interval variable for preview.
 
 <h3 id="release-notes-v1.0.2">OpooPress 1.0.2 (since 1.0.1)</h3>
 

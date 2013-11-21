@@ -1,0 +1,15 @@
+---
+layout: post
+title: 'OpooPress 1.0.3 版本发布'
+date: '2013-11-20 18:30'
+comments: true
+categories: ['opoopress']
+---
+
+OpooPress 静态博客生成器 1.0.3 版本发布了！
+
+该版本小幅修改几个 BUG，并增加了一个 OpooPress 博客助手。
+
+OpooPress 博客助手是一个绿色版的软件包，可以帮助非开发人员一键下载、配置（非安装） Java 和 Apache Maven，并初始化 OpooPress 博客生成器的运行环境，可极大地降低非 Java 开发者使用 OpooPress 静态博客的难度。
+
+请在这里[查看详细的版本发行说明](/zh/download/#release-notes-v1.0.3)。

@@ -23,12 +23,12 @@ OpooPress 是一个开源软件，可以下载源码自行编译。下载源码�
 
 ## 最新版本
 
-稳定版: **1.0.2**
+稳定版: **1.0.3**
 - 发行包: [Maven Central][mc]
-- 源代码: [tag: version-1.0.2](https://github.com/opoo/opoopress/tree/version-1.0.2)
+- 源代码: [tag: version-1.0.3](https://github.com/opoo/opoopress/tree/version-1.0.3)
 
-开发版: **1.0.3-SNAPSHOT**
-- 发行包: [Sonatype OSS snapshots repository][oss103]
+开发版: **1.1.0-SNAPSHOT**
+- 发行包: [Sonatype OSS snapshots repository][oss]
 - 源代码: [branch: master](https://github.com/opoo/opoopress)
 
 <div class="note info">
@@ -55,12 +55,19 @@ OpooPress 是一个开源软件，可以下载源码自行编译。下载源码�
 
 
 ## 发行历史
+* 2013-11-20 - 1.0.3
 * 2013-10-22 - 1.0.2
 * 2013-09-05 - 1.0.1 
 * 2013-08-07 - 1.0.0
 
 
 ## 发行说明
+
+<h3 id="release-notes-v1.0.3">OpooPress 1.0.3 (since 1.0.2)</h3>
+
+- Bug
+	- 修正 [Issue #3](https://github.com/opoo/opoopress/issues/3): Maven 始终检查更新 com.github.jnr:jnr-x86asm
+	- 修正了预览时目录监听间隔参数解析错误的问题
 
 <h3 id="release-notes-v1.0.2">OpooPress 1.0.2 (since 1.0.1)</h3>
 
@@ -95,4 +102,4 @@ OpooPress 是一个开源软件，可以下载源码自行编译。下载源码�
 
 [mc]: http://search.maven.org/#search%7Cga%7C1%7Corg.opoo.press "OpooPress from Maven Central"
 [oss]: https://oss.sonatype.org/index.html#nexus-search;quick~org.opoo.press "OpooPress snapshots from Sonatype OSS snapshots repository"
-[oss103]: https://oss.sonatype.org/content/repositories/snapshots/org/opoo/press/maven/plugins/opoopress-maven-plugin/1.0.3-SNAPSHOT/ "OpooPress 1.0.3-SNAPSHOT from Sonatype OSS snapshots repository"
+[oss110]: https://oss.sonatype.org/content/repositories/snapshots/org/opoo/press/maven/plugins/opoopress-maven-plugin/1.1.0-SNAPSHOT/ "OpooPress 1.1.0-SNAPSHOT from Sonatype OSS snapshots repository"
