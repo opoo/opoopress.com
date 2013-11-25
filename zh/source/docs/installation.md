@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: 安装指南
+title: 安装指南（Java 开发人员版）
 url: /docs/installation/
 index: 20
 group: "安装配置"
@@ -89,7 +89,7 @@ export M2_HOME M2 PATH</pre>
 ## 三、初始化 OpooPress
 可选择仅下载 `pom.xml` 或者下载 二次开发库 来初始化 OpooPress 博客/网站。
 
-### 3.1 仅 `pom.xml`
+<h3 id="pom-only"> 3.1 仅 <code>pom.xml</code></h3>
 1. 在本地创建您需要存放博客/网站的目录(`mkdir myblog`)。
 2. 进入该目录(`cd myblog`)。
 3. 下载 [pom.xml](http://www.opoopress.com/downloads/pom.xml) 到目录中。Linux 使用 `wget http://www.opoopress.com/downloads/pom.xml` 或者在链接上点右键另存为。
@@ -102,7 +102,7 @@ export M2_HOME M2 PATH</pre>
    <p>请阅读文档 <a href="../../faqs/how-to-use-opoopress-snapshots/">如何使用 OpooPress 开发版 (SNAPSHOT)</a>。</p>
 </div>
 
-### 3.2 二次开发库
+<h3 id="secondary-develop"> 3.2 二次开发库</h3>
 1. 下载二次开发库，这是一个标准的 Java 工程，Maven 目录结构
     - 使用 git 工具: `git clone https://github.com/opoopress/opoopress-site.git`
     - 使用 GitHub for Windows: 在 [opoopress-site](https://github.com/opoopress/opoopress-site) 右下角点击 `Clone in Desktop`

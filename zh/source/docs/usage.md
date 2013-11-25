@@ -6,7 +6,7 @@ index: 30
 group: "安装配置"
 ---
 
-## 一、Maven Plugin 版本命令
+## 一、Java 开发人员版的命令
  
 命令格式：`mvn op:command -Dparam1=val1 -Dparam2=var2 ...`
 
@@ -67,29 +67,29 @@ group: "安装配置"
 
 
 
-## 二、OpooPress Standalone 版本命令
+<h2 id="commands-for-non-developer"> 二、非开发人员版的命令</h2>
 
-命令格式通常是 `op command [site] [options]`，各个参数意义如下：
+命令格式通常是 `op command [options]`，与开发人员版的命令格式唯一区别就是去掉了 `mvn op:`前缀（例如 `op preview` 对应 `mvn op:preview`），
+其参数格式是一致的，都必须使用 `-D` 指定。
 
-1. 参数 `command`: 必要参数。用于指定要执行的 OpooPress 命令。目前支持的命令包括 
-	* `init`/`install`：安装并初始化网站/博客，可指定 locale，如果不指定，取系统默认值
-	* `generate`/`build`：生成静态网站
-	* `preview`：预览博客。启动一个 Web 服务器，并监控站点文件变化，变化时自动重新生成
-	* `deploy`：发布站点到指定的服务器或者本地目录
-	* `clean`：清理站点模板缓存和临时文件
-	* `newpage`：创建新页面
-	* `newpost`：创建新文章
-	* `wordpress`：从 WordPress 导入文章和页面
-	* `sass`：编译 SASS
+*目前仅提供 Windows 版本，请参安装指南文档。*
+
+可用以下各 `command`：
+
+- [install](/maven-site/opoopress-maven-plugin/install-mojo.html) - *安装并初始化网站/博客*
+- [sass-compile](/maven-site/opoopress-maven-plugin/sass-compile-mojo.html) - *编译 SASS*
+- [generate](/maven-site/opoopress-maven-plugin/generate-mojo.html) - *生成静态网站*
+- [build](/maven-site/opoopress-maven-plugin/build-mojo.html) - *生成静态网站，与 `generate`命令相同*
+- [preview](/maven-site/opoopress-maven-plugin/preview-mojo.html) - *启动一个 Web 服务器，并监控站点文件变化，变化时自动重新生成*
+- [deploy](/maven-site/opoopress-maven-plugin/deploy-mojo.html) - *发布站点到指定的服务器或者本地目录*
+- [clean](/maven-site/opoopress-maven-plugin/clean-mojo.html) - *清理站点模板缓存和临时文件*
+- [new-page](/maven-site/opoopress-maven-plugin/new-page-mojo.html) - *创建新页面*
+- [new-post](/maven-site/opoopress-maven-plugin/new-post-mojo.html) - *创建新文章*
+- [sass-watch](/maven-site/opoopress-maven-plugin/sass-watch-mojo.html) - *监控 SASS 文件，变化时自动重新编译*
+- [wordpress-import](/maven-site/opoopress-maven-plugin/wordpress-import-mojo.html) - *从 WordPress 导入文章和页面*
    
-   各个命令的详细用法及参数可以运行 `op command -h` 查看，例如 `op wordpress -h`。
+示例：
 
-2. 参数 `site`: 可选参数。该参数指定站点的名称（亦即目录名），默认值为 `site`。
-  
-  OpooPress 支持多博客（多站点），每个博客都是 `/path/to/opoopress/` 下的一个目录，通过给 `install`/`init` 命令传递 site 参数，可以安装（初始化）这多个博客。例如通过 `./op install en` 创建一个名为 `en` 的博客，并通过 `./op install cn` 创建一个名为 `cn` 的博客，它们的内容将分别存放在 `/path/to/opoopress/en/` 和 `/path/to/opoopress/cn/` 目录。
- 
-3. 其它参数/选项
-
-   通常是以一个 `-` 开头的参数，不同的 `command` 对应的参数/选项各不相同，可运行 `op command -h` 查看。
-
-   例如 `./op install en -l en_US` 可创建一个名为 `en` 的英文博客，`./op install cn -l zh_CN` 可创建一个名为 `cn` 的中文博客。
+- 初始化博客： `D:\opoopress-${site.op_current_version}>op init`
+- 预览博客：`D:\opoopress-${site.op_current_version}>op preview`
+- 发布博客：`D:\opoopress-${site.op_current_version}>op deploy`
