@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: Installation
+title: Installation for Java Developer
 url: /docs/installation/
 index: 20
 group: "GETTING STARTED"
@@ -64,7 +64,7 @@ See [JDK 7 Installation for Linux Platforms](http://docs.oracle.com/javase/7/doc
 ## 3. Downloading and Initializing OpooPress
 You hava two choice to install and initialize an OpooPress blog.
 
-### 3.1 `pom.xml` only
+<h3 id="pom-only">3.1 <code>pom.xml</code> only</h3>
 1. Create a directory in local file system, e.g. `mkdir myblog`
 2. `cd myblog`
 3. Download file [pom.xml](http://www.opoopress.com/downloads/pom.xml) to this directory, such as run `wget http://www.opoopress.com/downloads/pom.xml`.
@@ -74,7 +74,7 @@ You hava two choice to install and initialize an OpooPress blog.
 
 *Note: You can download <http://www.opoopress.com/downloads/pom-SNAPSHOT.xml> to use the lastest snapshot of OpooPress. Also see [How to use OpooPress snapshots](../../faqs/how-to-use-opoopress-snapshots/).*
 
-### 3.2 Secondary Develop Project for Developer
+<h3 id="secondary-develop">3.2 Secondary Develop Project for Developer</h3>
 1. Download secondary develop project from GitHub.com
     - with git: `git clone https://github.com/opoopress/opoopress-site.git`
     - with GitHub for Windows: click `Clone in Desktop` button on [opoopress-site](https://github.com/opoopress/opoopress-site) repository page 

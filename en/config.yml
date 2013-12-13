@@ -243,3 +243,5 @@ highlighter: "org.opoo.press.highlighter.SyntaxHighlighter"
 # auto_include_templates: ["global_template1.ftl", "global_template2.ftl"]
 
 
+op_current_version: "1.0.3"
+op_current_snapshot: "1.1.0-SNAPSHOT"

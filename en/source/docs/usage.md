@@ -6,9 +6,9 @@ index: 30
 group: "GETTING STARTED"
 ---
 
-## 1. For OpooPress Maven Plugin Release
+## 1. Commands for Java Developer
  
-Command format is`mvn op:command -Dparam1=val1 -Dparam2=var2 ...`.
+Command format is `mvn op:command -Dparam1=val1 -Dparam2=var2 ...`.
 
 You can execute more than one goals in one command, like `mvn op:command1 op:command2 ... -Dparam1=val1 -Dparam2=var2 ...`.
 
@@ -56,6 +56,28 @@ Examples:
 - `op:new-post`: the dependency chain will be `op:new-post -> Install & Initialize`, and the execution order will be `Install & Initialize -> Create new post`.
 
 
-## 2. For OpooPress Standalone Package Release
+<h2 id="commands-for-non-developer">2. Commands for Non-Developer</h2>
 
-Not available currently.
+Command format is ``op command [options]`.
+
+*for Windows ONLY currently*
+
+Command list:
+
+- [install](/maven-site/opoopress-maven-plugin/install-mojo.html) - *Install and initialize site/blog*
+- [sass-compile](/maven-site/opoopress-maven-plugin/sass-compile-mojo.html) - *Compile the SASS files into css*
+- [generate](/maven-site/opoopress-maven-plugin/generate-mojo.html) - *Generate static site/blog*
+- [build](/maven-site/opoopress-maven-plugin/build-mojo.html) - *Generate static site/blog, same as `generate`*
+- [preview](/maven-site/opoopress-maven-plugin/preview-mojo.html) - *Start a web server for preview, monitor the site for changes and generate whenever it does*
+- [deploy](/maven-site/opoopress-maven-plugin/deploy-mojo.html) - *Deploy site/blog to remote or local server*
+- [clean](/maven-site/opoopress-maven-plugin/clean-mojo.html) - *Clean site/blog templates cache and temp files*
+- [new-page](/maven-site/opoopress-maven-plugin/new-page-mojo.html) - *Create new page file*
+- [new-post](/maven-site/opoopress-maven-plugin/new-post-mojo.html) - *Create new post file*
+- [sass-watch](/maven-site/opoopress-maven-plugin/sass-watch-mojo.html) - *Watch the SASS for changes and compile whenever it does.*
+- [wordpress-import](/maven-site/opoopress-maven-plugin/wordpress-import-mojo.html) - *Import posts and pages from the XML file that exported from WordPress*
+   
+Examples:
+
+- Initialize a new blog: `D:\opoopress-${site.op_current_version}>op init`
+- Preview blog in browser: `D:\opoopress-${site.op_current_version}>op preview`
+- Deploy blog to server: `D:\opoopress-${site.op_current_version}>op deploy`
