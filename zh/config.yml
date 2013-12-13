@@ -74,8 +74,10 @@ email:
 
 # 如果发布到子目录如 http://site.com/project 则设置 'root: /project'
 root: /zh
-theme_root: '//static.opoo.org/themes/classic-white-op'
-default_theme_root: '//static.opoo.org/themes/default'
+#theme_root: '//static.opoo.org/themes/classic-white-op'
+#default_theme_root: '//static.opoo.org/themes/default'
+theme_root: '//dn-opstatic.qbox.me/themes/classic-white-op'
+default_theme_root: '//dn-opstatic.qbox.me/themes/default'
 
 # 固定链接支持的变量 ：
 # 		post 的 front-matter 头部变量 ，以及 ${year}, ${month}, ${day}, ${hour}, ${minute}, ${second}, ${name}, ${pathToFile}, ${fileName} 
@@ -132,7 +134,7 @@ navs: {"首页": "/zh/", "博客": "/zh/blog/", "下载": "/zh/download/", "文�
 
 # 侧边栏默认包含的模板数组。
 # 被设置的模板片段应该位于  [模板路径]/asides 目录，例如 site/templates/asides 或者 site/source/_templates/asides.
-default_asides: [recent_posts.ftl, recent_comments.ftl]
+default_asides: [recent_posts.ftl, recent_comments.ftl, about.ftl]
 
 # 首页侧边栏包含的模板，未设置使用 default_asides
 # blog_index_asides:
@@ -244,3 +246,5 @@ highlighter: "org.opoo.press.highlighter.SyntaxHighlighter"
 # auto_include_templates: ["global_template1.ftl", "global_template2.ftl"]
 
 
+op_current_version: "1.0.3"
+op_current_snapshot: "1.1.0-SNAPSHOT"

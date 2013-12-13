@@ -3,7 +3,7 @@ layout: page
 title: OpooPress 下载
 comments: true
 date: 2013-07-07 11:20
-updated: 2013-09-19 11:20
+updated: 2013-12-13 16:12
 sidebar: true
 footer: true
 description: "介绍 OpooPress 静态博客生成器的下载地址、最新版本、包说明、发行历史以及各个版本的发行说明（包括变更列表）。"
@@ -25,3 +25,11 @@ OpooPress 为非开发人员准备了一个绿色版的辅助包，下载并解�
 OpooPress 生成器所必须的文件。
 
 请参考[《非开发人员安装指南》](../docs/installation-non-developer/)。
+
+
+## OpooPress 相关资源
+- Git 使用手册 - ProGit 中文版（PDF）
+- FreeMarker 中文手册（PDF）
+- Markdown：[语法](http://markdown.tw/)、 [官网](http://daringfireball.net/projects/markdown/)、 [Txtmark(当前默认MD转换器)](https://github.com/rjeschke/txtmark)
+
+请进 QQ 群 OpooPress(300200574) 下载各个资源。
