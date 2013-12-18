@@ -157,7 +157,7 @@ $ mvn op:deploy
 
 <h3 id="opoopress-wagon-git">2.2 opoopress-wagon-git</h3>
 
-该 wagon 实质是通过 Java 封装了 git 命名行客户端工具。底层实现与 [maven-scm-provider-gitexe](#wagon-scm--maven-scm-provider-gitexe) 类似，但比其更加高效。
+该 wagon 实质是通过 Java 封装了 git 命名行客户端工具（**需要 1.8.1 及以上版本**）。底层实现与 [maven-scm-provider-gitexe](#wagon-scm--maven-scm-provider-gitexe) 类似，但比其更加高效。
 - 优点: 发布速度快
 - 缺点: 需要安装 git 命令行客户端
 

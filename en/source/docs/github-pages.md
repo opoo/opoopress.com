@@ -155,7 +155,7 @@ This is a demo site deployed to GitHub Pages: [http://opoo.github.io/](http://op
 
 <h3 id="opoopress-wagon-git">2.2 Using cutom wagon: opoopress-wagon-git</h3>
 
-This custom wagon uses git command line tools as lower level layer. It's similar to [maven-scm-provider-gitexe](#wagon-scm--maven-scm-provider-gitexe), but it's more faster.
+This custom wagon uses git command line tool(git version 1.8.1+ required) as lower level layer. It's similar to [maven-scm-provider-gitexe](#wagon-scm--maven-scm-provider-gitexe), but it's more faster.
 - Advantage: fast
 - Disadvantage: a git command line tool is required, such as [GitHub for Windows](https://windows.github.com/)
 

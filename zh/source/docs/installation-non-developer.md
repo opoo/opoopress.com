@@ -12,7 +12,7 @@ OpooPress 为非开发人员准备了一个绿色版的辅助包，该辅助包�
 
 请按以下步骤执行。
 
-1. 下载辅助包 [OpooPress Helper ${site.op_current_version}](http://vm.opoo.org/opoopress-${site.op_current_version}-win.zip)
+1. 下载辅助包 [OpooPress Helper ${site.op_current_version}](http://www.opoopress.com/downloads/cn/opoopress-${site.op_current_version}-win.zip)
 - 解压到一个不包含空格的路径，如 `D:\opoopress-${site.op_current_version}\`
 - 打开Windows cmd 窗口（按 Win 键，点运行，输入 `cmd` 回车），进入到该目录
 ```
