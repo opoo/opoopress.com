@@ -7,7 +7,7 @@
 <script type="text/javascript" src="${site.default_theme_root}/javascripts/opoopress.min.js"></script>
 <script language="JavaScript">
 <!--
-    window.OpooPress = new OpooPressApp({siteUrl:'${site.url}',rootUrl:'${root_url}',pageUrl:'${page.url}',<#if page.title??>title:'${page.title}',</#if><#if showGitHubRepos??>github:{target:'#gh_repos',user:'${site.github_user}',count:${site.github_repo_count},skip_forks:${site.github_skip_forks?string}},</#if><#if showDeliciousLinks??>delicious:{user:'${site.delicious_user}',count:'${site.delicious_count}'},</#if>refreshRelativeTimes:true,verbose:false},{});
+    window.OpooPress = new OpooPressApp({siteUrl:'${site.url}',rootUrl:'${root_url}',pageUrl:'${page.url}',<#if page.title??>title:'${page.title}',</#if><#if showGitHubRepos??>github:{target:'#gh_repos',user:'${site.github_user}',count:${site.github_repo_count},skip_forks:${site.github_skip_forks?string}},</#if><#if showDeliciousLinks??>delicious:{user:'${site.delicious_user}',count:'${site.delicious_count}'},</#if>refreshRelativeTimes:false,verbose:false},{});
     OpooPress.init();
 
 <#if site.disqus_short_name?? && (page.comments)!true == true && (site.disqus_show_comment_count)!false == true>

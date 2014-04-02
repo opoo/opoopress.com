@@ -1,4 +1,5 @@
-<div class="lang"><a href="/zh${page.url}" title="转到中文">中文</a> | <a href="/en${page.url}" title="Jump to English">ENGLISH</a></div>
+<#if page.no_english_version??><#assign english_version_url = "/en/"><#else><#assign english_version_url = "/en" + page.url></#if>
+<div class="lang">中文 | <a href="${english_version_url}" title="Jump to English">ENGLISH</a></div>
 <div class="logo"><img src="//www.opoopress.com/logo.png" alt="OpooPress"></div>
 <hgroup>
   <h1><a href="${ root_url }/">${ site.title }</a></h1>
