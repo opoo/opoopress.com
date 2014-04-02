@@ -23,5 +23,6 @@
   <link href="${ site.subscribe_rss }" rel="alternate" title="${site.title}" type="application/atom+xml">
   <link href="${ site.theme_root }/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <#include "custom/head.ftl">
+  <style>a{ text-decoration: none; }</style>
   <!--[if lt IE 9]><script src="${site.default_theme_root}/javascripts/html5shiv.js"></script><![endif]-->
 </head>

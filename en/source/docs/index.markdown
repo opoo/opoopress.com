@@ -22,11 +22,11 @@ Just can also download(git clone) the [sources](https://github.com/opoo/opoopres
 
 ## Current Versions
 
-Current stable version : **1.0.3**
+Current stable version : **${site.op_current_version}**
 - Binary : [Maven Central][mc]
-- Source : [tag: version-1.0.3](https://github.com/opoo/opoopress/tree/version-1.0.3)
+- Source : [tag: version-${site.op_current_version}](https://github.com/opoo/opoopress/releases/tag/opoopress-parent-1.1.0)
 
-Current snapshot version: **1.1.0-SNAPSHOT**
+Current snapshot version: **${site.op_current_snapshot}**
 - Binary : [Sonatype OSS snapshots repository][oss]
 - Source : [branch: master](https://github.com/opoo/opoopress)
 
@@ -53,6 +53,7 @@ Current snapshot version: **1.1.0-SNAPSHOT**
 	- [Document](../docs/github-pages/#opoopress-wagon-git)
 
 ## Releases History
+* 2014-03-25 - 1.1.0
 * 2013-11-20 - 1.0.3
 * 2013-10-22 - 1.0.2 
 * 2013-09-05 - 1.0.1 
@@ -60,6 +61,14 @@ Current snapshot version: **1.1.0-SNAPSHOT**
 
 
 ## Release Notes
+
+### OpooPress 1.1.0 (since 1.0.3) {#release-notes-v1.1.0}
+- Improvement
+	- Reconstructed the templates of default theme.
+	- Improved `SiteFilter`. ([This sample](https://github.com/opoo/opoo.org/blob/master/src/main/java/org/opoo/website/plugin/ImgFinder.java) uses the *new* SiteFilter)
+- New Feature
+	- Add [duoshuo](http://duoshuo.com/) comments widget.
+
 
 <h3 id="release-notes-v1.0.3">OpooPress 1.0.3 (since 1.0.2)</h3>
 

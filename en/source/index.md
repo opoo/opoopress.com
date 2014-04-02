@@ -24,9 +24,9 @@ OpooPress also have these features:
 - Supports custom meta data that is exposed to templates, pages or posts
 
 ## Post Format
-- [Markdown](http://daringfireball.net/projects/markdown/) by [Txtmark](https://github.com/rjeschke/txtmark) - (\*.md, \*.markdown)
 - HTML - (\*.html)
-- [Textile](http://textile.sitemonks.com/) by [Textile-j](https://textile-j.dev.java.net/) - (\*.textile)
+- [Markdown](http://daringfireball.net/projects/markdown/) by [Txtmark](https://github.com/rjeschke/txtmark) - (\*.md, \*.markdown)
+- [Textile](http://textile.sitemonks.com/) by [Textile-j](https://java.net/projects/textile-j) (also see [Mylyn WikiText](http://wiki.eclipse.org/Mylyn/Incubator/WikiText)) - (\*.textile)
 
 ## Migration
 - Octopress
@@ -41,7 +41,6 @@ OpooPress also have these features:
 - [Github Pages](/en/docs/github-pages/)
 
 # Getting Started
-The first package has be released. It's easy to set up and deploy.
 
 Stable releases are available from [Maven Central](http://search.maven.org/#search%7Cga%7C1%7Corg.opoo.press), and snapshot builds are available from the [Sonatype OSS snapshots repository](https://oss.sonatype.org/index.html#nexus-search;quick~org.opoo.press). Click the button below to know how to use them. 
 

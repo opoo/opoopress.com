@@ -24,7 +24,7 @@ see [Installation for Non-Developer](../docs/installation-non-developer/).
 
 ## Resources
 
-- [ProGit](http://git-scm.com/book)
+- [ProGit](http://git-scm.com/book) [PDF](https://github.s3.amazonaws.com/media/progit.en.pdf) [mobi](https://github.s3.amazonaws.com/media/pro-git.en.mobi) [ePub](https://github.s3.amazonaws.com/media/progit.epub)
 - [FreeMarker Manual](http://freemarker.org/docs/index.html)
 - [Markdown](http://daringfireball.net/projects/markdown/)
 - [Txtmark - Java markdown processor](https://github.com/rjeschke/txtmark)
