@@ -28,8 +28,8 @@ OpooPress 生成器所必须的文件。
 
 
 ## OpooPress 相关资源
-- Git 使用手册 - ProGit 中文版（PDF）
-- FreeMarker 中文手册（PDF）
-- Markdown：[语法](http://markdown.tw/)、 [官网](http://daringfireball.net/projects/markdown/)、 [Txtmark(当前默认MD转换器)](https://github.com/rjeschke/txtmark)
+- Git 使用手册 - ProGit 中文版：[在线](http://git-scm.com/book/zh)、[PDF](http://opstatic.u.qiniudn.com/files/progit-zh.pdf)、[ePub](https://github.s3.amazonaws.com/media/progit-zh.epub)
+- FreeMarker：[中文手册(PDF)](http://sourceforge.net/projects/freemarker/files/chinese-manual/FreeMarker_Manual_zh_CN.pdf/download)、[英文手册](http://freemarker.org/docs/index.html)
+- Markdown：[语法](http://markdown.tw/)、 [官网](http://daringfireball.net/projects/markdown/)、 [Txtmark(默认转换器)](https://github.com/rjeschke/txtmark)
 
 请进 QQ 群 OpooPress(300200574) 下载各个资源。

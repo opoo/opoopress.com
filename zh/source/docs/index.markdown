@@ -39,11 +39,11 @@ OpooPress 是一个开源软件，可以下载源码自行编译。下载源码�
 
 ## 最新版本
 
-稳定版: **1.0.3**
+稳定版: **${site.op_current_version}**
 - 发行包: [Maven Central][mc]
-- 源代码: [tag: version-1.0.3](https://github.com/opoo/opoopress/tree/version-1.0.3)
+- 源代码: [tag: version-${site.op_current_version}](https://github.com/opoo/opoopress/releases/tag/opoopress-parent-1.1.0)
 
-开发版: **1.1.0-SNAPSHOT**
+开发版: **${site.op_current_snapshot}**
 - 发行包: [Sonatype OSS snapshots repository][oss]
 - 源代码: [branch: master](https://github.com/opoo/opoopress)
 
@@ -71,6 +71,7 @@ OpooPress 是一个开源软件，可以下载源码自行编译。下载源码�
 
 
 ## 发行历史
+* 2014-03-25 - 1.1.0
 * 2013-11-20 - 1.0.3
 * 2013-10-22 - 1.0.2
 * 2013-09-05 - 1.0.1 
@@ -79,8 +80,14 @@ OpooPress 是一个开源软件，可以下载源码自行编译。下载源码�
 
 ## 发行说明
 
-<h3 id="release-notes-v1.0.3">OpooPress 1.0.3 (since 1.0.2)</h3>
+### OpooPress 1.1.0 (since 1.0.3) {#release-notes-v1.1.0}
+- Improvement
+	- 重构了默认主题的模板结构
+	- 扩展了 `SiteFilter` 的功能，以便于用户开发出功能更强大、细致的插件（[这个例子](https://github.com/opoo/opoo.org/blob/master/src/main/java/org/opoo/website/plugin/ImgFinder.java)使用了该特性）
+- New Feature
+	- 添加对多数评论的支持
 
+<h3 id="release-notes-v1.0.3">OpooPress 1.0.3 (since 1.0.2)</h3>
 - Bug
 	- 修正 [Issue #3](https://github.com/opoo/opoopress/issues/3): Maven 始终检查更新 com.github.jnr:jnr-x86asm
 	- 修正了预览时目录监听间隔参数解析错误的问题

@@ -25,9 +25,9 @@ OpooPress 还包含以下一些特性：
 
 
 ### 支持的文章格式
-- [Markdown](http://daringfireball.net/projects/markdown/) by [Txtmark](https://github.com/rjeschke/txtmark) - (\*.md, \*.markdown)
 - HTML - (\*.html)
-- [Textile](http://textile.sitemonks.com/) by [Textile-j](https://textile-j.dev.java.net/) - (\*.textile)
+- [Markdown](http://daringfireball.net/projects/markdown/) by [Txtmark](https://github.com/rjeschke/txtmark) - (\*.md, \*.markdown)
+- [Textile](http://textile.sitemonks.com/) by [Textile-j](https://java.net/projects/textile-j) (另见 [Mylyn WikiText](http://wiki.eclipse.org/Mylyn/Incubator/WikiText)) - (\*.textile)
 
 ### 支持从以下博客系统迁移数据
 - Octopress

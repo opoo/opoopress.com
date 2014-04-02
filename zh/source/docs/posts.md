@@ -32,7 +32,7 @@ mvn op:new-post -Dtitle="文章标题" -Dname="文件名称" -Dformat=markdown
 将生成文件 `$site/source/article/2013-07-31-shi-jie-ni-hao.md`
 
 <div class='note'>
-  <p>与 Jekyll、Octopress 不同，OpooPress 的文章源文件可以存放在 `$site/source` 下的任意位置，生成器在构建时会根据固定链接、URL 等参数输出到适当的路径。如果没有固定链接、URL 等影响输出路径的配置，则按文章在 `$site/source` 中的相对路径输出。</p>
+  <p>与 Jekyll、Octopress 不同，OpooPress 的文章源文件可以存放在 <code>$site/source</code> 下的任意位置，生成器在构建时会根据固定链接、URL 等参数输出到适当的路径。如果没有固定链接、URL 等影响输出路径的配置，则按文章在 <code>$site/source</code> 中的相对路径输出。</p>
 </div>
 
 
