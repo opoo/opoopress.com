@@ -1,0 +1,12 @@
+---
+layout: post
+title: 'OpooPress 1.1.0 released'
+date: '2014-03-25 18:30'
+comments: true
+categories: ['opoopress']
+---
+
+OpooPress static blog generator version 1.1.0 has been released.
+
+
+[Release Notes](/en/docs/#release-notes-v1.1.0) here.
