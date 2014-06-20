@@ -41,7 +41,7 @@ OpooPress 是一个开源软件，可以下载源码自行编译。下载源码�
 
 稳定版: **${site.op_current_version}**
 - 发行包: [Maven Central][mc]
-- 源代码: [tag: version-${site.op_current_version}](https://github.com/opoo/opoopress/releases/tag/opoopress-parent-1.1.0)
+- 源代码: [tag: version-${site.op_current_version}](https://github.com/opoo/opoopress/releases/tag/version-${site.op_current_version})
 
 开发版: **${site.op_current_snapshot}**
 - 发行包: [Sonatype OSS snapshots repository][oss]
@@ -71,6 +71,7 @@ OpooPress 是一个开源软件，可以下载源码自行编译。下载源码�
 
 
 ## 发行历史
+* 2014-06-18 - 1.1.1
 * 2014-03-25 - 1.1.0
 * 2013-11-20 - 1.0.3
 * 2013-10-22 - 1.0.2
@@ -79,6 +80,13 @@ OpooPress 是一个开源软件，可以下载源码自行编译。下载源码�
 
 
 ## 发行说明
+
+
+### OpooPress 1.1.1 (since 1.1.0) {#release-notes-v1.1.1}
+- Improvement
+	- 增加了多线程支持，在文章较多时，可显著加快生成网站速度
+- New Feature
+	- 增加了 WikiText 的转换器，目前支持更多的源文件格式，包括 `*.textile`, `*.tracwiki`, `*.mediawiki`, `*.twiki`, `*.confluence` 等。
 
 ### OpooPress 1.1.0 (since 1.0.3) {#release-notes-v1.1.0}
 - Improvement

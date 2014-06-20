@@ -24,7 +24,7 @@ Just can also download(git clone) the [sources](https://github.com/opoo/opoopres
 
 Current stable version : **${site.op_current_version}**
 - Binary : [Maven Central][mc]
-- Source : [tag: version-${site.op_current_version}](https://github.com/opoo/opoopress/releases/tag/opoopress-parent-1.1.0)
+- Source : [tag: version-${site.op_current_version}](https://github.com/opoo/opoopress/releases/tag/version-${site.op_current_version})
 
 Current snapshot version: **${site.op_current_snapshot}**
 - Binary : [Sonatype OSS snapshots repository][oss]
@@ -53,6 +53,7 @@ Current snapshot version: **${site.op_current_snapshot}**
 	- [Document](../docs/github-pages/#opoopress-wagon-git)
 
 ## Releases History
+* 2014-06-18 - 1.1.1
 * 2014-03-25 - 1.1.0
 * 2013-11-20 - 1.0.3
 * 2013-10-22 - 1.0.2 
@@ -61,6 +62,12 @@ Current snapshot version: **${site.op_current_snapshot}**
 
 
 ## Release Notes
+### OpooPress 1.1.1 (since 1.1.0) {#release-notes-v1.1.1}
+- Improvement
+	- Support generate site in multi-threading.
+- New Feature
+	- Support `*.textile`, `*.tracwiki`, `*.mediawiki`, `*.twiki`, `*.confluence` source formats, powered by WikiText.
+
 
 ### OpooPress 1.1.0 (since 1.0.3) {#release-notes-v1.1.0}
 - Improvement
