@@ -1,0 +1,13 @@
+---
+layout: post
+title: 'OpooPress 1.1.1 版本发布'
+date: '2014-06-18 18:30'
+comments: true
+categories: ['opoopress']
+---
+
+OpooPress 静态博客生成器 1.1.1 版本发布了！
+
+该版本修复了部分 Bug，重点增加了多线程的支持，在文章较多时，可显著加快生成网站速度。
+
+请[查看版本发行说明](/zh/docs/#release-notes-v1.1.1)或者[下载](/zh/download/)使用。
