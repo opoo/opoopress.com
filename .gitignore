@@ -24,6 +24,8 @@ local.properties
 .loadpath
 common/baidu*
 common/google*
+*.iml
+.idea/
 
 **/stylesheets/screen.css
 

@@ -1,0 +1,77 @@
+doc_versions:
+- {version: "1.x", path: /docs/1.x, url_prefix: /docs/1.x}
+- {version: "2.0", path: /docs/2.0, url_prefix: /docs}
+
+doc_items_1.x:
+- title: 安装配置
+  docs:
+  - /
+  - /overview/
+  - /quickstart/
+  - /installation/
+  - /installation/java/
+  - /installation/maven/
+  - /installation-non-developer/
+  - /usage/
+  - /structure/
+  - /configuration/
+- title: 内容
+  docs:
+  - /frontmatter/
+  - /posts/
+  - /pages/
+  - /codeblock/
+  - /variables/
+  - /migrations/
+- title: 定制
+  docs:
+  - /permalinks/
+  - /plugins/
+- title: 主题
+  docs:
+  - /theme/
+  - /theme/templates/
+  - /theme/styles/
+  - /theme/dev/
+- title: 发布
+  docs:
+  - /deployment-methods/
+  - /github-pages/
+  - /mailet/
+
+
+doc_items_2.0:
+- title: 安装配置
+  docs:
+  - /
+  - /overview/
+  - /quickstart/
+  - /installation/
+  - /installation/java/
+  - /installation/maven/
+  - /installation-non-developer/
+  - /usage/
+  - /structure/
+  - /configuration/
+- title: 内容
+  docs:
+  - /frontmatter/
+  - /posts/
+  - /pages/
+  - /codeblock/
+  - /variables/
+  - /migrations/
+- title: 定制
+  docs:
+  - /permalinks/
+  - /plugins/
+- title: 主题
+  docs:
+  - /theme/
+  - /theme/templates/
+  - /theme/styles/
+  - /theme/dev/
+- title: 发布
+  docs:
+  - /deployment-methods/
+  - /github-pages/

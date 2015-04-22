@@ -1,0 +1,30 @@
+doc_versions:
+- {version: "1.x", path: /docs, url_prefix: /docs}
+
+doc_items_1.x:
+- title: GETTING STARTED
+  docs:
+  - /
+  - /quickstart/
+  - /installation/
+  - /installation-non-developer/
+  - /usage/
+  - /structure/
+  - /configuration/
+- title: CONTENT
+  docs:
+  - /frontmatter/
+  - /posts/
+  - /pages/
+  - /codeblock/
+  - /variables/
+  - /migrations/
+- title: CUSTOMIZATION
+  docs:
+  - /permalinks/
+  - /plugins/
+- title: DEPLOYMENT
+  docs:
+  - /deployment-methods/
+  - /github-pages/
+  - /mailet/

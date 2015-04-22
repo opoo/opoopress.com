@@ -1,0 +1,149 @@
+name: default
+desription: "OpooPress default theme"
+
+artifact: "org.opoo.press.themes:opoopress-theme-default"
+url-release: "http://repo.opoopress.com/releases/org/opoo/press/themes/opoopress-theme-default/"
+url-snapshot: "http://repo.opoopress.com/snapshots/org/opoo/press/themes/opoopress-theme-default/"
+
+# The renderer/template engine of this theme.
+# Default template engine is FreeMarker, set this value to 'org.opoo.press.renderer.FreeMarkerRenderer' or comment below.
+# renderer: "org.opoo.press.renderer.FreeMarkerRenderer"
+
+
+#######################
+# theme variables     #
+#######################
+
+# ----------------------- #
+#   main settings         #
+# ----------------------- #
+
+# Simple seach url.
+simple_search: 'https://www.google.com/search'
+
+# Subscribe RSS address.
+subscribe_rss: /atom.xml
+
+# Subscribe email address.
+subscribe_email:
+
+# RSS feeds can list your email address if you like
+email:
+
+
+# Navigation menu items.
+navs: {"Home": "/en/", "Documentation": "/en/docs/", "Help": "/en/help/", "Blog": "/en/blog/", "Download": "/en/download/", "Source": "https://github.com/opoo/opoopress"}
+
+# list each of the sidebar modules you want to include, in the order you want them to appear.
+# To add custom asides, create files in 'templates/asides' folder and add them to the list like 'custom_aside_name.ftl'
+default_asides: [recent_posts.ftl, recent_comments.ftl, about.ftl]
+
+# Blog index page uses default asides, uncomment the line below and add array with the asides you want to use.
+# blog_index_asides:
+
+# Post uses default asides, uncomment the line below and add array with the asides you want to use.
+# post_asides:
+
+# Page uses default asides, uncomment the line below and add array with the asides you want to use.
+# page_asides:
+
+# "Continue reading" link text at the bottom of excerpted articles
+excerpt_link: "Read on &rarr;"
+
+# show relative time, e.g. "1 minute ago", "4 years ago"
+refreshRelativeTimes: true
+
+# Debug JavaScript?
+# verbose: false
+
+# The template file of new post. default 'new_post.ftl'
+# new_post_template: new_post.ftl
+
+# The template file of new page. default 'new_page.ftl'
+# new_page_template: new_page.ftl
+
+# The tempate file of custom layout, no default value.
+# Sample: new_doc_template: new_doc.ftl
+
+
+# ----------------------------#
+# FreeMarker Configuration    #
+# ----------------------------#
+# FreeMarker auto import templates. 'i18n/messages.ftl' for current theme.
+freemarker.auto_import_templates: {i18n: "i18n/messages.ftl"}
+
+# FreeMarker auto include template.
+# "freemarker.auto_include_templates": ["global_template1.ftl", "global_template2.ftl"]
+
+# Freemarker TemplateModel
+freemarker.template.TemplateModel: {titlecase: "org.opoo.press.template.TitleCaseModel"}
+
+
+# ----------------------- #
+#   3rd Party Settings    #
+# ----------------------- #
+
+# Github repositories
+github_user:
+github_repo_count: 0
+github_show_profile_link: false
+github_skip_forks: true
+
+# Twitter
+twitter_user: alexlincn
+twitter_tweet_button: true
+
+# Google +1
+google_plus_one: true
+google_plus_one_size: medium
+
+# Google Plus Profile
+# Hidden: No visible button, just add author information to search results
+googleplus_user:
+googleplus_hidden: false
+
+# Pinboard
+pinboard_user:
+pinboard_count: 3
+
+# Delicious
+delicious_user:
+delicious_count: 3
+
+# Disqus Comments
+disqus_short_name: opoopress
+disqus_show_comment_count: true
+
+# Duoshuo Comments
+duoshuo_short_name:
+duoshuo_show_comment_count: false
+
+# Google Analytics
+google_analytics_tracking_id: UA-42112065-1
+google_analytics_tracking_domain:
+
+# Facebook Like
+facebook_like: false
+
+
+#######################
+# Directories         #
+#######################
+
+# Asset folder, this folder is where you can put your static resources of your theme, such as images, css files, javascript files.
+# Default value is 'assets'.
+# asset_dir: assets
+
+# Source folder, this folders is where you can put your content of your theme, such as home index page, archive index page, etc.
+# Default value is 'sources'
+# source_dir: sources
+
+# Template folder, this folder is where you can put template files of your theme..
+# Default value is 'templates'.
+# template_dir: templates
+
+# Plugins folder, this folder is where you can put plugin jar files of your theme.
+# plugin_dir: plugins
+
+theme_root: '//static.opoo.org/themes/classic-white-op'
+default_theme_root: '//static.opoo.org/themes/default'

@@ -1,247 +1,205 @@
-# ----------------------- #
-# Site directory layout   #
-# ----------------------- #
-
-# The default layout like below
-#(.)
-# |
-# +- site the default site/blog directory.
-# |   |
-# |   +- config.yml (The site configuration file)
-# |   |
-# |   +- source (All YAML front-matter header files and some static files)
-# |   |
-# |   +- templates (FreeMarker template ONLY)
-# |   |
-# |   +- assets (All static files ONLY)
-# |  
-# +- (site2) another site
-# |
-# +- target
-#     |
-#     +- public
-#     |    |
-#     |    +- site the output directory for site
-#     |    |
-#     |    +- (site2) the output directory for site2
-#     |
-#     +- sass-cache
-#     |
-#     +- work
-
-
-# 'site' set the root directory of your site or blog, default value is the parent directory of this file. 
-# The subdirectory of 'site' are:
-# 	source：        must exists, store all YAML front-matter header files.
-#   templates：if not exists, then 'site/source/_templates' subdirectory, 
-#					one of 'site/templates' or 'site/source/_templates' must exists.
-#					store all FreeMarker template files.
-#	assets:    an optional subdirectory. store all static files(JavaScripts, images, ..)
-#                   in this folder will make the generate process more faster. 
-# site: site
-
-# The output directory, default value is '../target/public/${site}'. '${site}' value see above.
-# destination: target/public/site
-
-# The working directory, default value is '../target/work/${site}''.
-# working_dir: target/work/site
-
+# OpooPress site configuration
 
 # ----------------------- #
-#      Main Configs       #
+#      Main               #
 # ----------------------- #
 
-# Default value is java.util.Locale.getDefault()
+# The title of your website
+title: OpooPress
+
+# The subtitle of your website
+subtitle: A java based static website generator.
+
+# author, your name
+author: Alex Lin
+
+# The description of your website. Use as web page description meta value normaly.
+description: "OpooPress framework is a java based, blog-aware static website generator."
+
+# The keywords of your website.
+keywords: "OpooPress, Static website generator, Blog"
+
+# The locale(region and language) of your website.
+# check java.util.Locale at http://docs.oracle.com/javase/7/docs/api/java/util/Locale.html
 locale: en_US
 
+
+# ----------------------- #
+#      URL                #
+# ----------------------- #
+
+# The URL of your website.
 url: http://www.opoopress.com
-title: OpooPress
-subtitle: A java based static blog generator.
-author: Alex Lin
-simple_search: http://google.com/search
-description: OpooPress blogging framework is a java based static blog generator, it's also a static site generator.
-keywords: "java, static blog generator, static site generator, OpooPress, blog, static blog"
 
-# Default date format is "ordinal" (resulting in 'Jun 20 2013', java date format pattern
-# is 'MMM d yyyy'). You can specified a custom java date format string here such as 'yyyy-MM-dd'
-date_format: "ordinal"
+# The root directory of your website.
+# If your website is put in a subdirectory such as 'http://yoursite.com/blogs', set root to '/blogs'
+# No '/' at the end of root.
+# Default value is ''.
+root: '/en'
 
-# RSS / Email (optional) subscription links (change if using something like Feedburner)
-subscribe_rss: http://www.opoopress.com/en/atom.xml
-subscribe_email:
-# RSS feeds can list your email address if you like
-email:
+# Encode URL.
+#
+# Default value is false
+# url_encode: false
 
-# If publishing to a subdirectory as in http://site.com/project set 'root: /project'
-root: /en
-theme_root: '//static.opoo.org/themes/classic-white-op'
-default_theme_root: '//static.opoo.org/themes/default'
+# Decode URL
+#
+# Default value is false
+# url_decode: false
 
-# Permalink style supports variables：
-# 		The fron-matter headers of post, and ${year}, ${month}, ${day}, ${hour}, ${minute}, ${second}, ${name}, ${pathToFile}, ${fileName} 
-permalink: /article/${name}/
-# permalink_label: "&infin;"
-# permalink_label_feed: "&#9875; Permalink"
+# The permalink format of posts.
+# Supported variables: All front-matter meta properties, and ${year}, ${month}, ${day}, ${hour},${minute}, ${second},
+# ${name}, ${pathToFile}, ${fileName} etc.
+# Default value is '/article/${year}/${month}/${name}.html'.
+permalink_post: '/article/${name}/'
 
-# New post file full path (in source folder), supports variables: ${year}, ${month}, ${day}, ${hour}, ${minute}, ${second}, ${name}, ${title}, ${date}
-new_post: article/${year}-${month}-${day}-${name}.markdown
+# The permalink format of other LAYOUT.
+# Supported variables: All front-matter meta properties, and ${year}, ${month}, ${day}, ${hour},${minute}, ${second},
+# ${name}, ${pathToFile}, ${fileName} etc.
+# No default value.
+# permalink_<LAYOUT>: <YOUR PERMALINK FORMAT>
+# Sample: permalink for custom layout 'doc':
+# permalink_doc: '/docs/${version}/${name}.html'
 
-# New page file full path (in source folder), supports variables: ${year}, ${month}, ${day}, ${hour}, ${minute}, ${second}, ${name}, ${title}, ${date}
-new_page: ${name}.markdown
-
-# category folder
-category_dir: /category
-
-# Define the mapping of category nicename and name.
-# The categories that not defined here will be appropriate processed.
-category_names: {"opoopress": "OpooPress", "blog": "Blog"}
-
-# Category title prefix.
-category_title_prefix: "Category: "
-
-# tag directory
-tag_dir: /tag
-
-# Define the mapping of tag slug and name.
-# tag_names: {}
-
-# tag title prefix
-tag_title_prefix: "Tag: "
-
-# Posts per page on the blog index
-paginate: 10          		
-
-# Posts in the sidebar Recent Posts section
-recent_posts: 5
-
-# Posts in the bottom Related Posts section
-related_posts: 5   	
-
-# "Continue reading" link text at the bottom of excerpted articles
-excerpt_link: "Read on &rarr;"  
-
-# excerpt separator
-excerpt_separator: "<!--more-->"
-
-# Converts page and post titles to titlecase
-titlecase: true
-
-# Main navigation
-navs: {"Home": "/en/", "Blog": "/en/blog/", "Download": "/en/download/", "Documentation": "/en/docs/", "Help": "/en/help/", "Source": "https://github.com/opoo/opoopress"}
-#, "中文站点": "/zh/"
-
-# list each of the sidebar modules you want to include, in the order you want them to appear.
-# To add custom asides, create files in 'site/templates/asides' or 'site/source/_templates/asides' 
-# and add them to the list like 'custom_aside_name.ftl'
-default_asides: [recent_posts.ftl, github.ftl, delicious.ftl, pinboard.ftl, googleplus.ftl, recent_comments.ftl]
-
-# Each layout uses the default asides, but they can have their own asides instead. Simply uncomment the lines below
-# and add an array with the asides you want to use.
-# blog_index_asides:
-# post_asides:
-# page_asides:
-
-source_base_path: https://raw.github.com/opoo/opoopress.com/master/en/source
-source_link: Source
 
 # ----------------------- #
-#   3rd Party Settings    #
+#   Directory             #
+# ----------------------- #
+# default layout
+#(.)
+# |
+# +- pom.xml
+# |
+# +- config.yml
+# |
+# +- assets/
+# |
+# +- pages/
+# |
+# +- posts/
+# |
+# +- plugins/
+# |
+# +- themes/
+#     |
+#     +- default/
+#     |    |
+#     |    +- theme.yml
+#     |    |
+#     |    +- ...
+#     |
+#     +- another-theme/
+
+# Asset folders, these folders are where you can put your static resources, such as images, css files, javascript files.
+# Default value is [assets].
+# asset_dirs: [assets]
+
+# Source folders, these folders are where you can put your content.
+# Default value is [pages, posts].
+# source_dirs: [pages, posts]
+
+# Plugin folder, this folder is where you can put plugin jar files.
+# Default value is 'plugins'.
+# plugin_dir: plugins
+
+# Destination folder, this folder is where the generated files will be.
+# Default value is 'target/public'
+# dest_dir: target/public
+
+# Working directory.
+# Default value is 'target/work'
+# work_dir: target/work
+
+
+# ----------------------- #
+#    Writing              #
 # ----------------------- #
 
-# Github repositories
-github_user: 
-github_repo_count: 0
-github_show_profile_link: false
-github_skip_forks: true
+# The full path and filename of the new post.
+# Commonly, we also need define property 'new_post_template' in theme configuration file(theme.yml).
+#
+# Supported variables: ${year}, ${month}, ${day}, ${hour}, ${minute}, ${second}, ${name}, ${title}, ${date}, ${format}
+# The default value of format is 'markdown'.
+#
+# The default value of new_post is 'posts/${year}-${month}-${day}-${name}.${format}'.
+# new_post: 'posts/${year}-${month}-${day}-${name}.${format}'
 
-# Twitter
-twitter_user: alexlincn
-twitter_tweet_button: true
+# The full path and filename of the new page.
+# Commonly, we also need define property 'new_page_template' in theme configuration file(theme.yml).
+#
+# Supported variables: ${year}, ${month}, ${day}, ${hour}, ${minute}, ${second}, ${name}, ${title}, ${date}, ${format}
+# The default value of format is 'markdown'.
+#
+# The default value of new_post is 'pages/${name}.${format}'
+# new_page: 'pages/${name}.${format}'
 
-# Google +1
-google_plus_one: true
-google_plus_one_size: medium
+# The new file full path and filename for other custom layout..
+# new_<LAYOUT>: <FORMAT>
+# Commonly, we also need define property 'new_<LAYOUT>_template' in theme configuration file(theme.yml).
+#
+# Supported variables: ${year}, ${month}, ${day}, ${hour}, ${minute}, ${second}, ${name}, ${title}, ${date}, ${format}
+# The default value of format is 'markdown'.
+#
+# Sample: new_doc: 'pages/docs/${name}.md'
 
-# Google Plus Profile
-# Hidden: No visible button, just add author information to search results
-googleplus_user: 
-googleplus_hidden: false
+# Transform title into proper title case.
+# Default value is false.
+# titlecase: false
 
-# Pinboard
-pinboard_user: 
-pinboard_count: 3
+# Excerpt separator.
+# Default value is '<!--more-->'
+# excerpt_separator: '<!--more-->'
 
-# Delicious
-delicious_user: 
-delicious_count: 3
 
-# Disqus Comments
-disqus_short_name: opoopress
-disqus_show_comment_count: true
+# ----------------------- #
+# Pagination & Limitation #
+# ----------------------- #
 
-# Google Analytics
-google_analytics_tracking_id: UA-42112065-1
-google_analytics_tracking_domain:
+# The amount of the posts displayed in index page. Default value is 10.
+# paginate: 10
 
-# Facebook Like
-facebook_like: false
+# Recent posts limit. Default value is 5.
+# For blog-aware website only.
+# recent_posts: 5
+
+# Related post count of a single post. Default value is 5.
+# For blog-aware website only.
+# related_posts: 5
+
+
+# ----------------------- #
+#   Date/Time format      #
+# ----------------------- #
+
+# The default value of date format is 'yyyy-MM-dd'(ref java.util.Date).
+# The special value 'ordinal' equals to 'MMM d yyyy', eg. 'SEP 15 2013'
+# http://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html.
+# date_format: "ordinal"
+
+# Time format. http://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html.
+# time_format: 'HH:mm:ss'
 
 
 # ----------------------- #
 #   Deployment Settings   #
 # ----------------------- #
-# deploy_server: {id: my_vps_server, url: 'scp://my.vps.ip/var/www/html', user: 'ssh_username'}
 
+# Deployment servers info.
+# You can deploy OpooPress to multiple servers/repositories.
+# ref http://maven.apache.org/pom.html#Distribution_Management
+#
+# deploy:
+# - {id: server1, url: 'scp://server1.com/var/www/html'}
+# - {id: server2, url: 'scp://server2.com/var/www/html'}
+# - {id: local, url: 'file://D:/www'}
+deploy: [{id: opoopress_com, url: "${opoopress_com_deploy_url}"}]
 
+#theme_root: '//static.opoo.org/themes/classic-white-op'
+#default_theme_root: '//static.opoo.org/themes/default'
 
-#####################################################################################
-## CONFIGURATION BELOW FOR DEVELOPER ONLY (Secondary development)
-## If you don't understand what they are, don't change them.
-#####################################################################################
+theme: classic-white-custom
+source_base_path: https://raw.github.com/opoo/opoopress.com/master/en/source
+source_link: Source
+op_current_version: "1.1.1"
+op_current_snapshot: "1.1.1-SNAPSHOT"
 
-# ----------------------- #
-#   PlugIns Settings      #
-# ----------------------- #
-# plugins: 
-#  - org.opoo.press.plugin.SamplePlugin
-
-
-# ------------------------ #
-# Default PlugIn Settings  #
-# ------------------------ #
-converters:
-  - org.opoo.press.converter.TxtmarkMarkdownConverter
-
-generators:
-  - org.opoo.press.generator.PaginationGenerator
-  - org.opoo.press.generator.CategoryGenerator
-  - org.opoo.press.generator.TagGenerator
-  - com.opoopress.website.DocsGenerator
-  
-# siteFilters:
-#  - org.opoo.press.filter.SampleSiteFilter
-#siteFilters:
-# - org.opoo.press.filter.FixUrlSiteFilter
-
-# SlugHelper
-slugHelper: org.opoo.press.slug.ChineseToPinyinSlugHelper
-
-# ----------------------- #
-#   Code Block Settings   #
-# ----------------------- #
-
-# Default use 'SyntaxHighlighter' as the highlighter code block processor
-# http://alexgorbatchev.com/SyntaxHighlighter/
-highlighter: "org.opoo.press.highlighter.SyntaxHighlighter"
-
-
-# ----------------------- #
-#   FreeMarker config     #
-# ----------------------- #
-
-# auto_import_templates:{"ns" : "template_name.ftl", "ns2" : "template2_name.ftl"}
-# auto_include_templates: ["global_template1.ftl", "global_template2.ftl"]
-
-
-op_current_version: "1.0.3"
-op_current_snapshot: "1.1.0-SNAPSHOT"

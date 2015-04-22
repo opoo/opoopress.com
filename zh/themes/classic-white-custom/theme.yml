@@ -1,0 +1,150 @@
+name: classic white (custom)
+desription: "OpooPress classic white theme"
+
+# 当前主题的模板引擎。
+# 默认的默认引擎是 FreeMarker，设置该值为 'org.opoo.press.impl.FreeMarkerRenderer' 或者注释以下行即可。
+# renderer: "org.opoo.press.impl.FreeMarkerRenderer"
+
+
+#######################
+#    主题变量          #
+#######################
+
+# ----------------------- #
+#   main settings         #
+# ----------------------- #
+
+# 简单搜索的 url
+simple_search: 'https://www.google.com/search'
+
+# RSS 订阅使用的 URL
+subscribe_rss: http://www.opoopress.com/zh/atom.xml
+
+# 订阅邮件地址
+subscribe_email:
+
+# RSS feeds can list your email address if you like
+email:
+
+
+# 主导航菜单
+# "博客": "/zh/blog/", "下载": "/zh/download/",
+navs: {"首页": "/zh/", "文档": "/zh/docs/", "帮助": "/zh/help/", "博客": "/zh/blog/", "源码": "https://github.com/opoo/opoopress"}
+#, "English": "/en/"
+
+# 默认的侧边栏所包含的块。
+# 被设置的块应该位于  [模板路径]/asides 目录，如 'templates/asides'.
+default_asides: [recent_posts.ftl, recent_comments.ftl, about.ftl]
+
+# 首页侧边栏包含的块，未设置时使用 'default_asides'
+# blog_index_asides:
+
+# 文章侧边栏包含的块，未设置时使用 'default_asides'
+# post_asides:
+
+# 页面侧边栏包含的块，未设置时使用 'default_asides'
+# page_asides:
+
+# 在显示摘要的文章中'继续阅读'的按钮文字
+excerpt_link: "继续阅读"
+
+# 是否以相对时间显示，例如 “5 天前”、“1 分钟前”
+refreshRelativeTimes: true
+
+# 调试 JavaScript
+# verbose: false
+
+# 新文章的模板文件. 默认值 'new_post.ftl'
+# new_post_template: new_post.ftl
+
+# 新页面的模板文件， 默认值 'new_page.ftl'
+# new_page_template: new_page.ftl
+
+# 新的自定义的 layout 的模板文件，无默认值。
+# 示例: new_doc_template: new_doc.ftl
+
+
+# ----------------------------#
+# FreeMarker Configuration    #
+# ----------------------------#
+# FreeMarker 自动导入的模板。当前主题自动引入 i18n/messages.ftl
+freemarker.auto_import_templates: {i18n: "i18n/messages.ftl"}
+
+# FreeMarker 自动包含的模板。
+# "freemarker.auto_include_templates": ["global_template1.ftl", "global_template2.ftl"]
+
+# Freemarker TemplateModel
+freemarker.template.TemplateModel: {titlecase: "org.opoo.press.template.TitleCaseModel"}
+
+
+# ----------------------- #
+#   3rd Party Settings    #
+# ----------------------- #
+
+# Github repositories
+github_user:
+github_repo_count: 0
+github_show_profile_link: false
+github_skip_forks: true
+
+# Twitter
+twitter_user:
+twitter_tweet_button: false
+
+# Google +1
+google_plus_one: false
+google_plus_one_size: medium
+
+# Google Plus Profile
+# Hidden: No visible button, just add author information to search results
+googleplus_user:
+googleplus_hidden: false
+
+# Pinboard
+pinboard_user:
+pinboard_count: 3
+
+# Delicious
+delicious_user:
+delicious_count: 3
+
+# Disqus Comments
+disqus_short_name: opoopress
+disqus_show_comment_count: true
+
+# Duoshuo Comments
+duoshuo_short_name:
+duoshuo_show_comment_count: false
+
+# Google Analytics
+google_analytics_tracking_id: UA-42112065-1
+google_analytics_tracking_domain:
+
+# Facebook Like
+facebook_like: false
+
+
+#######################
+#  目录配置           #
+#######################
+
+# 主题静态资源所在的目录，用于放置静态资源（图片、css、js文件等）。
+# 默认值 assets
+# asset_dir: assets
+
+# 主题源文件(文章，页面等)目录，用于放置内容，例如站点的首页，归档页面等。
+# 默认值 'sources'
+# source_dir: sources
+
+# 主题的模板文件目录。.
+# 默认值 'templates'.
+# template_dir: templates
+
+# 主题的插件目录，如果您的主题包含插件包（jar文件），将插件文件放在 plugins 目录下，并取消下面的注释即可。
+# plugin_dir: plugins
+
+
+#theme_root: '//static.opoo.org/themes/classic-white-op'
+#default_theme_root: '//static.opoo.org/themes/default'
+theme_root: '//dn-opstatic.qbox.me/themes/classic-white-op'
+default_theme_root: '//dn-opstatic.qbox.me/themes/default'
