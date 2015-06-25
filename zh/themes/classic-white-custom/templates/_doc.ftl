@@ -17,7 +17,7 @@
   <footer>
       <p class="meta">
 	<#if (page.date)??><span class="byline"><#include "post/date.ftl"><#if was_updated??>${updated}<#else>${time}</#if></span></#if>
-	<#if (page.path)??><@i18n.source page.path></@i18n.source></#if>
+	<#if (page.pathFromBasedirToFile)??><@i18n.source page.pathFromBasedirToFile></@i18n.source></#if>
      </p>
 
       <#if (page.sharing)!true == true><#include "post/sharing.ftl"></#if>

@@ -197,7 +197,7 @@ deploy: [{id: opoopress_com, url: "${opoopress_com_deploy_url}"}]
 
 theme: classic-white-custom
 #excerpt_link: 继续阅读
-source_base_path: https://raw.github.com/opoo/opoopress.com/master/zh/source
+source_base_path: 'https://raw.githubusercontent.com/opoo/opoopress.com/master/zh'
 source_link: 本页源码
 op_current_version: "1.1.1"
 op_current_snapshot: "1.1.1-SNAPSHOT"
