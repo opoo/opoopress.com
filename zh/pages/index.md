@@ -7,7 +7,7 @@ OpooPress 2.0  一个基于 Java 的、高度灵活的、高度可扩展的静�
 
 ### 如何开始
 
-参考 [2.0文档](/zh/docs/2.0/) 以及 [1.x文档](/zh/docs/about/)。
+参考 [2.0文档](/zh/docs/) 以及 [1.x文档](/zh/docs/about/)。
 
 ### 源代码
 <https://github.com/opoo/opoopress>

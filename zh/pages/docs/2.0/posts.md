@@ -9,7 +9,7 @@ render: true
 
 执行以下指令创建新文章
 ```
-mvn op:new-post -Dtitle="文章标题" -Dname="文件名称" -Dformat=markdown
+mvn op:new -Dtitle="文章标题" -Dname="文件名称" -Dformat=markdown
 ```
 
 参数使用 `-D参数名=参数值` 的形式设置。其中：
@@ -23,11 +23,11 @@ mvn op:new-post -Dtitle="文章标题" -Dname="文件名称" -Dformat=markdown
 存储路径中的变量 year, month, day, hour, minute, second 取自于当前时间，变量 name, format 取自调用 new-post 的参数。
 
 示例1：
-	mvn op:new-post -Dtitle="世界，你好" -Dname="hello-world"
+	mvn op:new -Dtitle="世界，你好" -Dname="hello-world"
 将生成文件 `$site/source/article/2013-07-31-hello-world.markdown`
 
 示例2：
-	mvn op:new-post -Dtitle="世界，你好" -Dformat=md
+	mvn op:new -Dtitle="世界，你好" -Dformat=md
 将生成文件 `$site/source/article/2013-07-31-shi-jie-ni-hao.md`
 
 <div class='note'>

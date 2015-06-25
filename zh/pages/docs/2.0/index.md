@@ -87,8 +87,6 @@ mvn op:preview
 即可生成网站并打开预览。
 
 
-*命令 `mvn op:server` 与 `mvn op:preview` 等价。*
-
 浏览器打开 http://localhost:8080/ 可预览生成的网站。
 
 

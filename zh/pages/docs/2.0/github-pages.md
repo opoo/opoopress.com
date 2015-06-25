@@ -208,17 +208,20 @@ Windows 环境建议安装 [GitHub for Windows](https://windows.github.com/)，�
 ```
 1. 在主配置文件 `config.yml` 中配置 `deploy_server` 信息
 HTTPS 协议
-```plain
-deploy_server: {id: "github", url: "git:https://github.com/opoo/opoo.github.io.git", branch: "master"}
-```
+	```plain
+	deploy: 
+	- {id: "github", url: "git:https://github.com/opoo/opoo.github.io.git", branch: "master"}
+	```
 或者 SSH 协议
-```plain
-deploy_server: {id: "github", url: "git:ssh://git@gitserver/opt/gitrepos/pages.git", branch: "master"}
-```
+	```plain
+	deploy:
+	- {id: "github", url: "git:ssh://git@gitserver/opt/gitrepos/pages.git", branch: "master"}
+	```
 或者省略协议名称的 SSH 协议
-```plain
-deploy_server: {id: "github", url: "git:default://git@github.com:opoo/opoopress.git", branch: "gh-pages"}
-```
+	```plain
+	deploy: 
+	- {id: "github", url: "git:default://git@github.com:opoo/opoopress.git", branch: "gh-pages"}
+	```
 该配置包含以下一些参数
     * **id**
         * Maven `settings.xml` 中 `server` 的 id。
@@ -282,13 +285,15 @@ Windows 环境建议安装 GitHub for Windows，该工具即可用于操作 GitH
 </build>
 ```
 2. 在主配置文件 `config.yml` 中配置 `deploy_server` 信息
-```plain
-deploy_server: {id: "github", url: "scm:git:https://github.com/opoo/opoo.github.io.git"}
-```
+	```plain
+	deploy: 
+	- {id: "github", url: "scm:git:https://github.com/opoo/opoo.github.io.git"}
+	```
 或者
-```plain
-deploy_server: {id: "github", url: "scm:git:ssh://git@github.com/opoo/opoopress.git"}
-```
+	```plain
+	deploy: 
+	- {id: "github", url: "scm:git:ssh://git@github.com/opoo/opoopress.git"}
+	```
 该配置包含以下一些参数
     * **id**
         * Maven `settings.xml` 中 `server` 的 id。

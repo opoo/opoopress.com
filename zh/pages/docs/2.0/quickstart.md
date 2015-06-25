@@ -4,13 +4,39 @@ title: 快速开始
 url: /docs/quickstart/
 ---
 
-以下命令可以下载、安装、生成 OpooPress 并启动一个用于预览的 Web 服务器。
+### Step 1. 创建站点
+```shell
+mvn org.opoo.press.maven.plugins:opoopress-archetype-plugin:2.0-beta-1:create
 ```
-~ $ mkdir myblog
-~ $ cd myblog
-~ $ wget http://www.opoopress.com/downloads/pom.xml
-~ $ mvn op:preview
+或者
+```shell
+mvn archetype:generate -Dfilter=:opoopress-archetype-site
+cd <artifactId>
+mvn op:init
+mvn op:theme -Dname=default
 ```
-用浏览器打开 http://localhost:8080/ 即可见预览界面。
+
+### Step 2. 内容
+
+创建新文章
+```shell
+mvn op:new -Dtitle=你好 -Dname=hello
+```
+或者创建示例文章
+```shell
+mvn op:sample-post
+```
+
+### Step 3. 生成及预览
+执行 
+```shell
+mvn op:build op:preview
+``` 
+或者直接执行 
+```shell
+mvn op:preview
+``` 
+即可生成网站并打开预览。
 
 
+浏览器打开 http://localhost:8080/ 可预览生成的网站。

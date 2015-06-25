@@ -113,14 +113,6 @@ YAML front-matter header 以三个 `-` 的行开始，并同样以三个 `-` 的
     </tr>
     <tr>
       <td>
-        <p><code>sidebar</code></p>
-      </td>
-      <td>
-        <p>当前页面/文章是否允许侧边栏。可选，默认值 <code>true</code>。</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
         <p><code>footer</code></p>
       </td>
       <td>
@@ -199,6 +191,15 @@ YAML front-matter header 以三个 `-` 的行开始，并同样以三个 `-` 的
       </td>
       <td>
         <p>文章的摘要。可选。在博客首页显示摘要，并显示继续阅读按钮。</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <p><code>&lt;CUSTOM TAG&gt;</code></p>
+      </td>
+      <td>
+        <p>其它自定义tag，OpooPress 2+支持定义任意tag属性。</p>
       </td>
     </tr>
 

@@ -6,7 +6,17 @@ url: /docs/deployment-methods/
 
 OpooPress 可通过多种方式发布。大部分是通过 [Apache Maven Wagon](http://maven.apache.org/wagon/) 实现的。可参考 Apache Maven Wagon 文档了解更多细节。
 
-**注意**: 当前文档涉及到非常多的 Apache Maven 知识。
+**注意**: 当前文档涉及到较多的 Apache Maven 知识。
+
+OpooPress 2+ 支持将一个站点同时发布到多个位置，典型的应用就是将站点同时发布到不同 IP 的服务器，然后通过智能 DNS 将网站的域名解析到不同的 IP，以达到 CDN 一样的效果。
+
+发布目标信息应配置 `deploy` 属性，该属性的值应该是数组，例如
+```plain
+deploy:
+- {id: server1, url: 'scp://server1.com/var/www/html'}
+- {id: server2, url: 'scp://server2.com/var/www/html'}
+- {id: local, url: 'file://D:/www'}
+```
 
 ## 一、常见发布方式
 - File
@@ -18,16 +28,18 @@ OpooPress 可通过多种方式发布。大部分是通过 [Apache Maven Wagon](
 
 ### 1.1 File
 1. OpooPress 配置 `config.yml`
-```plain
-deploy_server: {id: "file", url: "file://var/www/html"}
-```
+	```plain
+	deploy: 
+	- {id: "file", url: "file://var/www/html"}
+	```
 2. 执行 `mvn op:deploy`
 
 ### 1.2 HTTP
 1. OpooPress 配置 `config.yml`
-```plain
-deploy_server: {id: "my_http_server", url: "http://domain.com/var/www/html"}
-```
+	```plain
+	deploy: 
+	- {id: "my_http_server", url: "http://domain.com/var/www/html"}
+	```
 2. Maven 配置 `settings.xml`
 ```xml
 <server>
@@ -40,9 +52,10 @@ deploy_server: {id: "my_http_server", url: "http://domain.com/var/www/html"}
 
 ### 1.3 FTP
 1. OpooPress 配置 `config.yml`
-```plain
-deploy_server: {id: "my_ftp_server", url: "ftp://domain.com/var/www/html"}
-```
+	```plain
+	deploy: 
+	- {id: "my_ftp_server", url: "ftp://domain.com/var/www/html"}
+	```
 2. Maven 配置 `settings.xml`
 ```xml
 <server>
@@ -55,9 +68,10 @@ deploy_server: {id: "my_ftp_server", url: "ftp://domain.com/var/www/html"}
 
 ### 1.4 SSH/SCP
 1. OpooPress 配置 `config.yml`
-```plain
-deploy_server: {id: "my_ssh_server", url: "scp://domain.com/var/www/html"}
-```
+	```plain
+	deploy: 
+	- {id: "my_ssh_server", url: "scp://domain.com/var/www/html"}
+	```
 2. Maven 配置 `settings.xml`
 ```xml
 <server>
@@ -77,9 +91,10 @@ deploy_server: {id: "my_ssh_server", url: "scp://domain.com/var/www/html"}
 ### 1.5 WebDAV
 
 1. OpooPress 配置 `config.yml`
-```plain
-deploy_server: {id: "my_web_server", url: "https://domain.com/var/www/html"}
-```
+	```plain
+	deploy: 
+	- {id: "my_web_server", url: "https://domain.com/var/www/html"}
+	```
 2. Maven 配置 `settings.xml`
 ```xml
 <server>
@@ -139,13 +154,15 @@ deploy_server: {id: "my_web_server", url: "https://domain.com/var/www/html"}
 	`wagon-scm` + `maven-scm-provider-svnexe` 则是 Apache 官方特供的访问 SVN 库的 wagon 实现。
 
 2. OpooPress 配置 `config.yml`
-```plain
-deploy_server: {id: "myhttps_server", url: "myhttps://domain.com/path/to/www", param1: "val1", param2: "val2"}
-```
+	```plain
+	deploy: 
+	- {id: "myhttps_server", url: "myhttps://domain.com/path/to/www", param1: "val1", param2: "val2"}
+	```
 或者
-```plain
-deploy_server: {id: "my_svn_server", url: "scm:svn:https://domain.com/svnrepo"}
-```
+	```plain
+	deploy: 
+	- {id: "my_svn_server", url: "scm:svn:https://domain.com/svnrepo"}
+	```
 
 3. Maven 配置 `settings.xml`
 

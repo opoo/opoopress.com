@@ -6,7 +6,7 @@ render: true
 ---
 
 各种layout的固定链接由以下形式定义
-- permalink_<LAYOUT>: <FORMAT>
+- `permalink_<LAYOUT>: <FORMAT>`
 
 以下内容未更新
 -----
@@ -18,21 +18,21 @@ render: true
 - 文章文件名称：fileName
 - 文章 front-matter 头部所定义的所有变量
 
-`permalink` 的默认值为 `/article/${'$'}{year}/${'$'}{month}/${'$'}{name}/`，生成的 URL 如 `/article/2013/09/helle-world/`。
+`permalink_post` 的默认值为 `/article/${'$'}{year}/${'$'}{month}/${'$'}{name}/`，生成的 URL 如 `/article/2013/09/helle-world/`。
 
 示例1：
-	permalink: /article/${'$'}{title}/
+	permalink_post: /article/${'$'}{title}/
 
 ==>
 	/article/世界，你好/
 
 示例2：
-	permalink: /post/${'$'}{name}.html
+	permalink_post: /post/${'$'}{name}.html
 ==>
 	/post/hello-world.html
 
 示例3：
-	permalink: /post/${'$'}{post_id}/
+	permalink_post: /post/${'$'}{post_id}/
 ==>
 	/post/102/
 `post_id` 为当前文章 front-matter 中的自定义变量，且当前文章必须包含该变量。使用 OpooPress 从 WordPress 导入后，文章的 ID 及对应于导入后的 `post_id` 变量。
