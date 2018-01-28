@@ -146,5 +146,5 @@ facebook_like: false
 
 #theme_root: '//static.opoo.org/themes/classic-white-op'
 #default_theme_root: '//static.opoo.org/themes/default'
-theme_root: '//dn-opstatic.qbox.me/themes/classic-white-op'
-default_theme_root: '//dn-opstatic.qbox.me/themes/default'
+theme_root: '//static.opoo.org/themes/classic-white-op'
+default_theme_root: '//static.opoo.org/themes/default'
